@@ -37,11 +37,19 @@ public class GameHandler : MonoBehaviour
 
     public void RestartGame()
     {
-        Time.timeScale = 1f;
+        //Time.timeScale = 1f;
         // GameHandler_PauseMenu.GameisPaused = false;
-        playerHealth = 5;
-        SceneManager.LoadScene("Menu");
+        //playerHealth = 5;
+        SceneManager.LoadScene("MainMenu");
         
+    }
+
+    public void StartGame(){
+        SceneManager.LoadScene("MainScene");
+    }
+
+    public void Credits(){
+        //SceneManager.LoadScene("Credits");
     }
 
     public void QuitGame()
