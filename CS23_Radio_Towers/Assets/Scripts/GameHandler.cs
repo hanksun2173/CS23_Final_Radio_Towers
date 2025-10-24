@@ -49,7 +49,11 @@ public class GameHandler : MonoBehaviour
     }
 
     public void Credits(){
-        //SceneManager.LoadScene("Credits");
+        SceneManager.LoadScene("Credits");
+    }
+
+    public void ReplayLastLevel(){
+        //Go back to previous checkpoint
     }
 
     public void QuitGame()
