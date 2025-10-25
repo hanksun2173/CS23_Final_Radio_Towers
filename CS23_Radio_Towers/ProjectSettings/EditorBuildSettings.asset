@@ -8,6 +8,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 5bca413feb3ca4bd2b039464eeeef95d
+  - enabled: 1
+    path: Assets/Scenes/EndLose.unity
+    guid: ded9c2406ad53402aa2dd010d296f141
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 811dc3ab060bf441ea934f54ea735b96
+  - enabled: 1
+    path: Assets/Scenes/EndWin.unity
+    guid: 49845370f5adb4ba5901d46a6ccec0d0
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
