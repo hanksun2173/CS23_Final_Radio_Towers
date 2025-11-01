@@ -4,82 +4,100 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class PlayerMovement : MonoBehaviour {
-
-    public Rigidbody2D rb;
-    private bool FaceRight = true;
-    public static float runSpeed = 10f;
-    public float startSpeed = 10f;
+public class PlayerMovement : MonoBehaviour
+{
+    public float moveSpeed = 5f;
+    public float Horizontal;
+    public float jumpForce = 10f;
+    public Transform groundCheck;
+    public float groundCheckRadius = 0.2f;
+    public LayerMask groundLayer;
+    public int extraJumpsValue = 2;
     private Vector2 moveDirection;
-    public GameHandler gameHandler;
+
+    private Rigidbody2D rb;
+    // true when the player is facing right (matches positive localScale.x)
+    private bool FaceRight = true;
+    private int extraJumps;
+    private bool canDash = true;
+    private bool isDashing;
+    private float dashingPower = 10f;
+    private float dashingTime = 0.2f;
+    private float dashCoolDown = 1f;
+
+
+    private bool isGrounded;
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start() {
-        rb = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();    
+        extraJumps = extraJumpsValue;    
+    }
 
-        if (GameObject.FindWithTag("GameHandler") != null) {
-            gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
+    // Update is called once per frame
+    void Update() {
+        Horizontal = Input.GetAxisRaw("Horizontal");
+
+        if (isDashing)
+        {
+            return;
         }
-    }
 
-    void FixedUpdate(){
-        moveDirection.x = Input.GetAxisRaw ("Horizontal");
-        rb.MovePosition(rb.position + moveDirection * runSpeed * Time.fixedDeltaTime);
-        if ((moveDirection.x < 0 && !FaceRight) || (moveDirection.x > 0 && FaceRight)) {
-            playerTurn();
+        float moveInput = Input.GetAxis("Horizontal");
+        // use the standard Rigidbody2D.velocity property
+        rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
+
+        if (isGrounded) {
+            extraJumps = extraJumpsValue;
         }
+
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            if (isGrounded) {
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            }
+            else if (extraJumps > 0) {
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+                extraJumps--;
+
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
+        {
+            StartCoroutine(Dash());
+        }
+        playerTurn();
+        
     }
 
-    private void playerTurn(){
-        // NOTE: Switch player facing label
-        FaceRight = !FaceRight;
-
-        // NOTE: Multiply player's x local scale by -1.
-        Vector3 theScale = transform.localScale;
-        theScale.x *= -1;
-        transform.localScale = theScale;
+    private void FixedUpdate() {
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
     }
 
-    // void HandleMovement()
-    // {
-        // moveDirection = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
-        // if (isAlive == true)
-        // {
-
-            // anim.ResetTrigger("Still");
-            // anim.ResetTrigger("Front");
-            // anim.ResetTrigger("Back");
-            // anim.ResetTrigger("Side_L");
-            // anim.ResetTrigger("Side_R");
-
-            // if ((moveDirection.y > 0))
-            // {
-            //     anim.SetTrigger("Front");
-
-            // }
-            // else if ((moveDirection.y < 0))
-            // {
-            //     anim.SetTrigger("Back");
-            // }
-            // else if ((moveDirection.x < 0))
-            // {
-            //     anim.SetTrigger("Side_L");
-            // }
-            // else if ((moveDirection.x > 0))
-            // {
-            //     anim.SetTrigger("Side_R");
-            // }
-            // else
-            // {
-            //     anim.SetTrigger("Still");
-            // }
-
-            // Turning. Reverse if input is moving the Player right and Player faces left.
-            // 
-        // }
-    // }
-
-    // private IEnumerator DelayInteractionText()
-    // {
-    //     yield return new WaitForSeconds(0.5f);
-    //     InteractionText.SetActive(false);
-    // }
+    private IEnumerator Dash()
+    {
+        canDash = false;
+        isDashing = true;
+        float originalGravity = rb.gravityScale;
+        rb.gravityScale = 0f;
+        float dashDir = FaceRight ? 1f : -1f;
+        rb.linearVelocity = new Vector2(dashDir * dashingPower, 0f);
+        yield return new WaitForSeconds(dashingTime);
+        rb.gravityScale = originalGravity;
+        isDashing = false;
+        yield return new WaitForSeconds(dashCoolDown);
+        canDash = true;
+    }
+    
+    private void playerTurn()
+    {
+        // Flip when input direction doesn't match facing direction
+        if ((Horizontal > 0 && !FaceRight) || (Horizontal < 0 && FaceRight))
+        {
+            FaceRight = !FaceRight;
+            Vector3 theScale = transform.localScale;
+            theScale.x *= -1f;
+            transform.localScale = theScale;
+        }
+       
+    }
 }
