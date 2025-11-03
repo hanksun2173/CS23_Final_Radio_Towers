@@ -1,41 +1,78 @@
 using UnityEngine;
 
 /// <summary>
-/// Simplified: disable collisions between two layers at startup.
-/// Attach to any GameObject; the change is applied once (static) and affects the physics collision matrix.
+/// Keep debris from colliding with ground (applies a global layer collision ignore once) and
+/// destroy debris when it touches a death collider (by layer or by explicit DeathCollider component).
+/// Attach this to debris prefabs so spawned debris inherit the behavior.
 /// </summary>
 public class DebrisIgnoreColliders : MonoBehaviour
 {
-    [Tooltip("First layer name (usually the debris layer)")]
+    
     [SerializeField]
     private string layerAName = "Debris";
 
-    [Tooltip("Second layer name (usually the ground layer)")]
     [SerializeField]
     private string layerBName = "Ground";
 
-    [Tooltip("Whether to ignore collisions between the two layers")]
     [SerializeField]
     private bool ignore = true;
 
-    // Ensure we only apply the change once across all instances
+    [SerializeField]
+    private string deathLayerName = "Death";
+
+    private int deathLayerIndex = -1;
+
+    // Apply global setting once
     private static bool s_applied = false;
 
     private void Awake()
     {
-        if (s_applied) return;
-
-        int a = LayerMask.NameToLayer(layerAName);
-        int b = LayerMask.NameToLayer(layerBName);
-
-        if (a < 0 || b < 0)
+        // Apply global layer ignore once
+        if (!s_applied)
         {
-            Debug.LogWarning($"DebrisIgnoreColliders: Layer '{layerAName}' or '{layerBName}' not found. No changes applied.");
+            int a = LayerMask.NameToLayer(layerAName);
+            int b = LayerMask.NameToLayer(layerBName);
+            if (a >= 0 && b >= 0)
+            {
+                Physics2D.IgnoreLayerCollision(a, b, ignore);
+                s_applied = true;
+                Debug.Log($"DebrisIgnoreColliders: IgnoreLayerCollision({layerAName},{layerBName}) = {ignore}");
+            }
+            else
+            {
+                Debug.LogWarning($"DebrisIgnoreColliders: Layer '{layerAName}' or '{layerBName}' not found. No layer-ignore applied.");
+            }
+        }
+
+        // Cache death layer index per-instance so spawned debris work correctly
+        deathLayerIndex = LayerMask.NameToLayer(deathLayerName);
+        if (deathLayerIndex < 0)
+        {
+            Debug.LogWarning($"DebrisIgnoreColliders: Death layer '{deathLayerName}' not found. Debris will not be destroyed by layer checks.");
+        }
+    }
+
+    // single helper to handle both trigger and collision callbacks
+    private void HandleCollision(Collider2D other)
+    {
+        if (other == null) return;
+
+        // If a Death layer exists and the other object is on it, destroy
+        if (deathLayerIndex >= 0 && other.gameObject.layer == deathLayerIndex)
+        {
+            Destroy(gameObject);
             return;
         }
 
-        Physics2D.IgnoreLayerCollision(a, b, ignore);
-        s_applied = true;
-        Debug.Log($"DebrisIgnoreColliders: IgnoreLayerCollision({layerAName},{layerBName}) = {ignore}");
+        // Support explicit DeathCollider component (on the object or a parent)
+        if (other.GetComponentInParent<DeathCollider>() != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
     }
+
+    private void OnTriggerEnter2D(Collider2D other) => HandleCollision(other);
+
+    private void OnCollisionEnter2D(Collision2D collision) => HandleCollision(collision?.collider);
 }

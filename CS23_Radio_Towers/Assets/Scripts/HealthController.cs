@@ -20,6 +20,8 @@ public class HealthController : MonoBehaviour
 
     public bool isInvincible;
 
+    public UnityEvent OnDied;
+
     public UnityEvent OnDamaged;
 
     public UnityEvent OnHealthChanged;
@@ -46,7 +48,7 @@ public class HealthController : MonoBehaviour
 
         if (_currentHealth == 0)
         {
-            SceneManager.LoadScene("GameOver");
+            OnDied.Invoke();
         }
         else
         {
@@ -70,6 +72,64 @@ public class HealthController : MonoBehaviour
             _currentHealth = _maximumHealth;
         }
     }
+
+    /// <summary>
+    /// Immediately kill the player (respects isInvincible). Invokes OnDied and loads GameOver.
+    /// </summary>
+    // public void Die()
+    // {
+    //     if (_currentHealth == 0) return; // already dead
+    //     if (isInvincible) return; // can't die while invincible
+
+    //     _currentHealth = 0;
+    //     OnHealthChanged.Invoke();
+    //     OnDied?.Invoke();
+
+    //     // Load GameOver scene (preserve previous behavior)
+    //     SceneManager.LoadScene("GameOver");
+    // }
+
+    // If the player collides with hazard objects, die.
+    // This checks for a tag named "Death" or for objects that have a DeathCollider component.
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other == null) return;
+
+        if (isInvincible) return;
+
+        // Tag-based lethal objects
+        if (other.CompareTag("Death"))
+        {
+            OnDied.Invoke();
+            return;
+        }
+
+        // Component-based lethal objects (legacy/explicit DeathCollider)
+        if (other.GetComponent<DeathCollider>() != null)
+        {
+            OnDied.Invoke();
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision == null || collision.collider == null) return;
+        if (isInvincible) return;
+
+        var col = collision.collider;
+        if (col.CompareTag("Death"))
+        {
+            OnDied.Invoke();
+            return;
+        }
+
+        if (col.GetComponent<DeathCollider>() != null)
+        {
+            OnDied.Invoke();
+        }
+    }
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
