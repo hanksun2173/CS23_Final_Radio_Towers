@@ -7,7 +7,7 @@ public class PlayerPlatformMovement : MonoBehaviour
     public Transform groundCheck;
     public float groundCheckRadius = 0.2f;
     public LayerMask groundLayer;
-    public int extraJumpsValue = 2;
+    public int extraJumpsValue = 1;
 
     private Rigidbody2D rb;
     private int extraJumps;

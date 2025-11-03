@@ -37,7 +37,7 @@ public class LadderMovement : MonoBehaviour
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, vertical * speed);   
         } else
         {
-            rb.gravityScale = 1f;
+            rb.gravityScale = 2f;
         }
     }
 
