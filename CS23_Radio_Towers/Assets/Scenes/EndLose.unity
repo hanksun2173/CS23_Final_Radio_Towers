@@ -519,11 +519,7 @@ GameObject:
   - component: {fileID: 730999244}
   - component: {fileID: 730999243}
   m_Layer: 5
-<<<<<<< Updated upstream
   m_Name: Canvas
-=======
-  m_Name: Canvas (1)
->>>>>>> Stashed changes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
