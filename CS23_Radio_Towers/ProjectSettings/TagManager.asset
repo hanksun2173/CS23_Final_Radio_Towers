@@ -7,6 +7,7 @@ TagManager:
   - GameHandler
   - Ladder
   - Death
+  - PauseMenu
   layers:
   - Default
   - TransparentFX
