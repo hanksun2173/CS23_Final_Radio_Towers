@@ -16,7 +16,7 @@ public class GameHandler : MonoBehaviour
     [SerializeField] private int currentSpawnIndex = 0;
 
     // public GameObject Health;
-    public static int playerHealth = 5;
+    public static int playerHealth = 6;
 
     void Awake()
     {
