@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3258393211041941951}
-  - component: {fileID: 6550088387187333335}
+  - component: {fileID: -5116154622591974616}
   m_Layer: 0
   m_Name: GameHandler
   m_TagString: GameHandler
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6550088387187333335
+--- !u!114 &-5116154622591974616
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -44,3 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b04c670019ff41a38251ca2bf17e090, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnPoints:
+  - {x: 0, y: -3}
+  - {x: 44, y: -3}
+  currentSpawnIndex: 0

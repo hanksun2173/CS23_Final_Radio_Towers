@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class PauseHandler : MonoBehaviour {
 
+        public static PauseHandler Instance { get; private set; }
         public static bool GameisPaused = false;
         public GameObject pauseMenuUI;
         // public AudioMixer mixer;
@@ -14,67 +15,48 @@ public class PauseHandler : MonoBehaviour {
         // private Slider sliderVolumeCtrl;
 
         void Awake(){
-                DontDestroyOnLoad(gameObject);
-                // pauseMenuUI.SetActive(true); // so slider can be set
-                // SetLevel (volumeLevel);
-                // GameObject sliderTemp = GameObject.FindWithTag("PauseMenuSlider");
-                // if (sliderTemp != null){
-                //         sliderVolumeCtrl = sliderTemp.GetComponent<Slider>();
-                //         sliderVolumeCtrl.value = volumeLevel;
-                // }
-        }
-
-        void OnEnable() {
-                SceneManager.sceneLoaded += OnSceneLoaded;
-        }
-
-        void OnDisable() {
-                SceneManager.sceneLoaded -= OnSceneLoaded;
-        }
-
-        private void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
-                // Try multiple ways to find pause menu UI
-                GameObject found = null;
-                // Method 1: Find by name "Pause Menu UI"
-                found = GameObject.Find("PauseMenu");
-                
-                // Method 2: If not found, try finding by tag "PauseMenu"
-                if (found == null) {
-                        found = GameObject.FindWithTag("PauseMenu");
+                if (Instance != null && Instance != this)
+                {
+                        Destroy(gameObject);
+                        return;
                 }
+                Instance = this;
+                DontDestroyOnLoad(gameObject);
                 
-                // Method 3: If still not found, search for any GameObject with "Pause" in the name
-                if (found == null) {
-                        GameObject[] allObjects = Resources.FindObjectsOfTypeAll<GameObject>();
-                        foreach (GameObject obj in allObjects) {
-                                if (obj.name.Contains("Pause") && obj.scene == scene) {
-                                        found = obj;
-                                        break;
-                                }
+                // Make sure the Canvas is also persistent - but only if it's a root object
+                if (pauseMenuUI != null)
+                {
+                        Canvas canvas = pauseMenuUI.GetComponentInParent<Canvas>();
+                        if (canvas != null && canvas.transform.parent == null && canvas.gameObject != gameObject)
+                        {
+                                // Only apply DontDestroyOnLoad if Canvas is a root GameObject
+                                DontDestroyOnLoad(canvas.gameObject);
+                        }
+                        else if (canvas != null && canvas.transform.parent != null)
+                        {
+                                Debug.LogWarning("[PauseHandler] Canvas is not a root GameObject. Move the Canvas to the root level in the hierarchy for DontDestroyOnLoad to work properly.");
                         }
                 }
-                
-                if (found != null) {
-                        pauseMenuUI = found;
-                        pauseMenuUI.SetActive(false);
-                        Debug.Log("[PauseHandler] Found and assigned pause menu: " + found.name + " in " + scene.name);
-                } else {
-                        pauseMenuUI = null;
-                        Debug.LogWarning("[PauseHandler] No pause menu UI found in scene " + scene.name + ". Checked for 'PauseMenuUI' name, 'PauseMenu' tag, and objects containing 'Pause'.");
-                }
-                GameisPaused = false;
         }
 
         void Start(){
                 if (pauseMenuUI != null) {
                         pauseMenuUI.SetActive(false);
+                        
+                        // Ensure proper canvas setup for web builds
+                        Canvas canvas = pauseMenuUI.GetComponentInParent<Canvas>();
+                        if (canvas != null) {
+                                canvas.renderMode = RenderMode.ScreenSpaceOverlay;
+                                canvas.sortingOrder = 100; // High value to appear on top
+                        }
                 }
                 GameisPaused = false;
+                Time.timeScale = 1f; // Ensure game is running
         }
 
         void Update(){
             if (Input.GetKeyDown(KeyCode.Escape)){
-                if (GameisPaused) {
+                if(GameisPaused){
                         Resume();
                 }
                 else{
@@ -89,10 +71,12 @@ public class PauseHandler : MonoBehaviour {
                 Time.timeScale = 0f;
                 GameisPaused = true;
             }
+            else if (pauseMenuUI == null) {
+                Debug.LogWarning("[PauseHandler] Cannot pause - pauseMenuUI is null!");
+            }
             else {
                 Resume();
             }
-            //NOTE: This added conditional is for a pause button
         }
 
         public void Resume() {
@@ -101,6 +85,12 @@ public class PauseHandler : MonoBehaviour {
                 }
                 Time.timeScale = 1f;
                 GameisPaused = false;
+        }
+
+        // Method for pause menu buttons to load MainScene
+        public void LoadMainScene() {
+                Resume(); // Ensure game is unpaused
+                SceneManager.LoadScene("MainScene");
         }
 
         // public void SetLevel(float sliderValue){

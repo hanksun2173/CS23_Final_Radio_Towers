@@ -1,11 +1,19 @@
-// DeathCollider is deprecated: player death is handled by HealthController now.
-// Keeping this file as a no-op to avoid compile errors from other assets that may reference it.
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class DeathCollider : MonoBehaviour
 {
-    private void Awake()
+    public int loseSpawnIndex = 0;
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.LogWarning("DeathCollider is deprecated. Player death is handled in HealthController. You can safely remove this component from scene objects.");
+        if (collision.CompareTag("Player"))
+        {
+            if (GameHandler.Instance != null)
+            {
+                GameHandler.Instance.SetSpawnIndex(loseSpawnIndex);
+            }
+            SceneManager.LoadScene("MainScene");
+            // Spawn applied by GameHandler on scene load
+        }
     }
 }

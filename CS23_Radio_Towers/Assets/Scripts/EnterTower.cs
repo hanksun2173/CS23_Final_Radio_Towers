@@ -3,11 +3,16 @@ using UnityEngine.SceneManagement;
 
 public class EnterTower : MonoBehaviour
 {
-    public static bool towerEntered = false;
+    [Header("Tower Configuration")]
+    [Tooltip("Unique identifier for this tower (e.g., 'Tower1', 'RadioTower', etc.)")]
+    public string towerId = "Tower1";
+    
+    [Tooltip("Scene to load when entering this tower")]
+    public string levelSceneName = "RadioTower_LVL1";
     
     void Start()
     {
-        if (towerEntered)
+        if (GameHandler.HasTowerBeenEntered(towerId))
         {
             GetComponent<Collider2D>().isTrigger = false;
         }
@@ -17,14 +22,14 @@ public class EnterTower : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            // Mark tower as entered (persists across scene loads)
-            towerEntered = true;
+            // Mark this specific tower as entered
+            GameHandler.MarkTowerEntered(towerId);
             
-            // Disable the collider immediately
+            // Disable the trigger
             GetComponent<Collider2D>().isTrigger = false;
             
             // Load the level
-            SceneManager.LoadScene("RadioTower_LVL1");
+            SceneManager.LoadScene(levelSceneName);
         }
     }
 }

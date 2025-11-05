@@ -15,6 +15,10 @@ public class GameHandler : MonoBehaviour
     [Tooltip("Current active spawn index (auto applied when MainScene loads)")] 
     [SerializeField] private int currentSpawnIndex = 0;
 
+    [Header("Tower Management")]
+    [Tooltip("Tracks which towers have been entered (by tower ID)")]
+    public static HashSet<string> enteredTowers = new HashSet<string>();
+
     // public GameObject Health;
     public static int playerHealth = 6;
 
@@ -22,11 +26,55 @@ public class GameHandler : MonoBehaviour
     {
         if (Instance != null && Instance != this)
         {
+            Debug.Log("[GameHandler] Duplicate GameHandler found and destroyed. Existing Instance: " + Instance.name);
             Destroy(gameObject);
             return;
         }
         Instance = this;
         DontDestroyOnLoad(gameObject);
+        Debug.Log("[GameHandler] GameHandler Instance set: " + gameObject.name);
+    }
+
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // Only apply spawn positioning in MainScene
+        if (scene.name == "MainScene")
+        {
+            ApplySpawnPosition();
+        }
+    }
+
+    private void ApplySpawnPosition()
+    {
+        if (spawnPoints == null || spawnPoints.Length == 0)
+        {
+            Debug.LogWarning("[GameHandler] Cannot apply spawn position. spawnPoints not configured.");
+            return;
+        }
+        if (currentSpawnIndex < 0 || currentSpawnIndex >= spawnPoints.Length)
+        {
+            Debug.LogWarning($"[GameHandler] currentSpawnIndex {currentSpawnIndex} out of range. Using index 0.");
+            currentSpawnIndex = 0;
+        }
+
+        // Find the player and position them
+        GameObject player = GameObject.FindWithTag("Player");
+        if (player != null)
+        {
+            Vector2 spawnPosition = spawnPoints[currentSpawnIndex];
+            player.transform.position = spawnPosition;
+            Debug.Log($"[GameHandler] Player positioned at spawn index {currentSpawnIndex}: {spawnPosition}");
+        }
     }
 
     void Start()
@@ -56,14 +104,23 @@ public class GameHandler : MonoBehaviour
 
     public void RestartGame()
     {
+        Debug.Log("[GameHandler] RestartGame() called");
+        // Reset all tower states when restarting game
+        ResetAllTowers();
         SceneManager.LoadScene("MainMenu");
     }
 
     public void StartGame(){
+        Debug.Log("[GameHandler] StartGame() called");
+        // Reset to first spawn point when starting new game
+        currentSpawnIndex = 0;
+        // Reset all tower states when starting new game
+        ResetAllTowers();
         SceneManager.LoadScene("MainScene");
     }
 
     public void Credits(){
+        Debug.Log("[GameHandler] Credits() called");
         SceneManager.LoadScene("Credits");
     }
 
@@ -71,6 +128,7 @@ public class GameHandler : MonoBehaviour
 
     public void QuitGame()
     {
+        Debug.Log("[GameHandler] QuitGame() called");
         #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
         #else
@@ -95,28 +153,29 @@ public class GameHandler : MonoBehaviour
         Debug.Log($"[GameHandler] currentSpawnIndex set to {currentSpawnIndex} at position {spawnPoints[currentSpawnIndex]}");
     }
 
-    private void ApplySpawnIfMainScene(Scene scene)
+    // ===== TOWER MANAGEMENT =====
+    
+    public static void MarkTowerEntered(string towerId)
     {
-        if (scene.name != "MainScene") return;
-        if (spawnPoints == null || spawnPoints.Length == 0)
-        {
-            Debug.LogWarning("[GameHandler] No spawn points configured for MainScene.");
-            return;
-        }
-        // Find player GameObject with tag "Player"
-        GameObject player = GameObject.FindWithTag("Player");
-        if (player == null)
-        {
-            Debug.LogWarning("[GameHandler] Player GameObject not found. Cannot apply spawn.");
-            return;
-        }
-        player.transform.position = spawnPoints[Mathf.Clamp(currentSpawnIndex, 0, spawnPoints.Length - 1)];
-        Debug.Log($"[GameHandler] Player positioned at spawn index {currentSpawnIndex} -> {spawnPoints[currentSpawnIndex]}");
-        Time.timeScale = 1f;
-        PauseHandler.GameisPaused = false;
+        enteredTowers.Add(towerId);
+        Debug.Log($"[GameHandler] Tower '{towerId}' marked as entered. Total entered: {enteredTowers.Count}");
+    }
+    
+    public static bool HasTowerBeenEntered(string towerId)
+    {
+        return enteredTowers.Contains(towerId);
+    }
+    
+    public static void ResetAllTowers()
+    {
+        enteredTowers.Clear();
+        Debug.Log("[GameHandler] All tower states reset");
+    }
+    
+    public static void ResetSpecificTower(string towerId)
+    {
+        enteredTowers.Remove(towerId);
+        Debug.Log($"[GameHandler] Tower '{towerId}' state reset");
     }
 
-    void OnEnable() => SceneManager.sceneLoaded += OnSceneLoaded;
-    void OnDisable() => SceneManager.sceneLoaded -= OnSceneLoaded;
-    private void OnSceneLoaded(Scene scene, LoadSceneMode mode) => ApplySpawnIfMainScene(scene);
 }
