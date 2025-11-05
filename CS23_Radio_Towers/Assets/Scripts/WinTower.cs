@@ -23,6 +23,10 @@ public class WinTower : MonoBehaviour
         {
             if (GameHandler.Instance != null)
             {
+                // Mark the current tower as completed since player won
+                GameHandler.MarkCurrentTowerCompleted();
+                
+                // Set spawn point for return to MainScene
                 GameHandler.Instance.SetSpawnIndex(winSpawnIndex);
             }
             SceneManager.LoadScene("MainScene");

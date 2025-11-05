@@ -12,9 +12,11 @@ public class EnterTower : MonoBehaviour
     
     void Start()
     {
-        if (GameHandler.HasTowerBeenEntered(towerId))
+        // Check if this tower has been completed and disable trigger if so
+        if (GameHandler.HasTowerBeenCompleted(towerId))
         {
             GetComponent<Collider2D>().isTrigger = false;
+            Debug.Log($"[EnterTower] Tower '{towerId}' already completed - trigger disabled");
         }
     }
 
@@ -22,13 +24,10 @@ public class EnterTower : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            // Mark this specific tower as entered
-            GameHandler.MarkTowerEntered(towerId);
+            // Set the current tower being played so WinTower knows which to mark as completed
+            GameHandler.SetCurrentTower(towerId);
             
-            // Disable the trigger
-            GetComponent<Collider2D>().isTrigger = false;
-            
-            // Load the level
+            // Load the level scene
             SceneManager.LoadScene(levelSceneName);
         }
     }

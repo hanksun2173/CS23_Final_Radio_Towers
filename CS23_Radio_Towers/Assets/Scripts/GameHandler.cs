@@ -16,8 +16,11 @@ public class GameHandler : MonoBehaviour
     [SerializeField] private int currentSpawnIndex = 0;
 
     [Header("Tower Management")]
-    [Tooltip("Tracks which towers have been entered (by tower ID)")]
-    public static HashSet<string> enteredTowers = new HashSet<string>();
+    [Tooltip("Tracks which towers have been completed (by tower ID)")]
+    public static HashSet<string> completedTowers = new HashSet<string>();
+    
+    [Tooltip("Currently active tower being played")]
+    public static string currentTowerId = "";
 
     // public GameObject Health;
     public static int playerHealth = 6;
@@ -58,12 +61,10 @@ public class GameHandler : MonoBehaviour
     {
         if (spawnPoints == null || spawnPoints.Length == 0)
         {
-            Debug.LogWarning("[GameHandler] Cannot apply spawn position. spawnPoints not configured.");
             return;
         }
         if (currentSpawnIndex < 0 || currentSpawnIndex >= spawnPoints.Length)
         {
-            Debug.LogWarning($"[GameHandler] currentSpawnIndex {currentSpawnIndex} out of range. Using index 0.");
             currentSpawnIndex = 0;
         }
 
@@ -104,8 +105,7 @@ public class GameHandler : MonoBehaviour
 
     public void RestartGame()
     {
-        Debug.Log("[GameHandler] RestartGame() called");
-        // Reset all tower states when restarting game
+
         ResetAllTowers();
         SceneManager.LoadScene("MainMenu");
     }
@@ -141,41 +141,58 @@ public class GameHandler : MonoBehaviour
     {
         if (spawnPoints == null || spawnPoints.Length == 0)
         {
-            Debug.LogWarning("[GameHandler] Cannot set spawn index. spawnPoints not configured.");
             return;
         }
         if (index < 0 || index >= spawnPoints.Length)
         {
-            Debug.LogWarning($"[GameHandler] Spawn index {index} out of range (Length={spawnPoints.Length}).");
             return;
         }
         currentSpawnIndex = index;
-        Debug.Log($"[GameHandler] currentSpawnIndex set to {currentSpawnIndex} at position {spawnPoints[currentSpawnIndex]}");
     }
 
     // ===== TOWER MANAGEMENT =====
     
-    public static void MarkTowerEntered(string towerId)
+    public static void SetCurrentTower(string towerId)
     {
-        enteredTowers.Add(towerId);
-        Debug.Log($"[GameHandler] Tower '{towerId}' marked as entered. Total entered: {enteredTowers.Count}");
+        currentTowerId = towerId;
+        Debug.Log($"[GameHandler] Current tower set to '{towerId}'");
     }
     
-    public static bool HasTowerBeenEntered(string towerId)
+    public static void MarkTowerCompleted(string towerId)
     {
-        return enteredTowers.Contains(towerId);
+        completedTowers.Add(towerId);
+        Debug.Log($"[GameHandler] Tower '{towerId}' marked as completed. Total completed: {completedTowers.Count}");
+    }
+    
+    public static void MarkCurrentTowerCompleted()
+    {
+        if (!string.IsNullOrEmpty(currentTowerId))
+        {
+            MarkTowerCompleted(currentTowerId);
+            currentTowerId = ""; // Clear current tower
+        }
+        else
+        {
+            Debug.LogWarning("[GameHandler] No current tower set - cannot mark as completed");
+        }
+    }
+    
+    public static bool HasTowerBeenCompleted(string towerId)
+    {
+        return completedTowers.Contains(towerId);
     }
     
     public static void ResetAllTowers()
     {
-        enteredTowers.Clear();
+        completedTowers.Clear();
+        currentTowerId = "";
         Debug.Log("[GameHandler] All tower states reset");
     }
     
     public static void ResetSpecificTower(string towerId)
     {
-        enteredTowers.Remove(towerId);
-        Debug.Log($"[GameHandler] Tower '{towerId}' state reset");
+        completedTowers.Remove(towerId);
+        Debug.Log($"[GameHandler] Tower '{towerId}' completion status reset");
     }
 
 }
