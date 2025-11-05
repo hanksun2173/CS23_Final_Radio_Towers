@@ -1379,6 +1379,18 @@ PrefabInstance:
       propertyPath: pauseMenuUI
       value: 
       objectReference: {fileID: 1878659331}
+    - target: {fileID: -5116154622591974616, guid: a61420614f5744cc2bab4ba2d0eb5a23, type: 3}
+      propertyPath: spawnPoints.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -5116154622591974616, guid: a61420614f5744cc2bab4ba2d0eb5a23, type: 3}
+      propertyPath: spawnPoints.Array.data[2].x
+      value: 88
+      objectReference: {fileID: 0}
+    - target: {fileID: -5116154622591974616, guid: a61420614f5744cc2bab4ba2d0eb5a23, type: 3}
+      propertyPath: spawnPoints.Array.data[2].y
+      value: -3
+      objectReference: {fileID: 0}
     - target: {fileID: 1953262475305927254, guid: a61420614f5744cc2bab4ba2d0eb5a23, type: 3}
       propertyPath: m_Name
       value: GameHandler
@@ -1593,6 +1605,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d5ecca3b924f48c392992f5eb67eee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 0}
 --- !u!4 &1054298226
 Transform:
   m_ObjectHideFlags: 0
