@@ -33,8 +33,20 @@ public class MovingPlatform : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            // parent the player's transform to this platform so it moves together
-            collision.transform.SetParent(transform);
+            // Check if this platform is active and valid before parenting
+            if (gameObject.activeInHierarchy && transform != null)
+            {
+                try
+                {
+                    // parent the player's transform to this platform so it moves together
+                    collision.transform.SetParent(transform);
+                    Debug.Log("[MovingPlatform] Player parented to moving platform");
+                }
+                catch (System.Exception e)
+                {
+                    Debug.LogWarning($"[MovingPlatform] Could not parent player: {e.Message}");
+                }
+            }
         }
     }
 
@@ -43,7 +55,29 @@ public class MovingPlatform : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.transform.SetParent(null);
+            // Immediately unparent the player safely without using coroutines
+            SafelyUnparentPlayer(collision.transform);
+        }
+    }
+    
+    private void SafelyUnparentPlayer(Transform playerTransform)
+    {
+        // Check if the player transform still exists and is valid
+        if (playerTransform != null)
+        {
+            try
+            {
+                // Check if the player is actually parented to this platform
+                if (playerTransform.parent == transform)
+                {
+                    playerTransform.SetParent(null);
+                    Debug.Log("[MovingPlatform] Player safely unparented from platform");
+                }
+            }
+            catch (System.Exception e)
+            {
+                Debug.LogWarning($"[MovingPlatform] Could not unparent player: {e.Message}");
+            }
         }
     }
 }

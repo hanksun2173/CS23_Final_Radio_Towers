@@ -84,12 +84,11 @@ public class GameManagerBridge : MonoBehaviour
         if (targetPauseMenu != null)
             targetPauseMenu.Resume();
         
-        // Then load MainScene via GameHandler
+        
         if (EnsureGameHandler())
         {
-            // Reset to starting spawn point and load MainScene
             GameHandler.Instance.SetSpawnIndex(0);
-            GameHandler.Instance.StartGame(); // This loads MainScene
+            GameHandler.Instance.StartGame();
         }
     }
 }

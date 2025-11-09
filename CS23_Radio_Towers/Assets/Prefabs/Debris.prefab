@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6008436595522261879}
   - component: {fileID: 2790519507821596107}
   - component: {fileID: 7182074952636606580}
+  - component: {fileID: 6382606185845397238}
   m_Layer: 7
   m_Name: Debris
   m_TagString: Untagged
@@ -31,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.89, y: 3.73, z: -2}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -238,7 +239,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.5
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -265,6 +266,7 @@ MonoBehaviour:
   layerAName: FallingDebris
   layerBName: Ground
   ignore: 1
+  deathLayerName: Death
 --- !u!114 &7182074952636606580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -278,3 +280,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damageAmount: 10
+--- !u!114 &6382606185845397238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5126547753330224755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b54ff8a34c3284412a7cb081acc15d07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debrisSprites:
+  - {fileID: 954268322516929583, guid: 20f820247f68f45238d7921b9d33b346, type: 3}
+  - {fileID: 3935513822340845865, guid: 21b9de2187894460594876dcf6973095, type: 3}
+  - {fileID: -6946604196499597553, guid: efb96841055ad4d508361a1ddf816f70, type: 3}
