@@ -8,6 +8,7 @@ TagManager:
   - Ladder
   - Death
   - PauseMenu
+  - Pipe
   layers:
   - Default
   - TransparentFX
