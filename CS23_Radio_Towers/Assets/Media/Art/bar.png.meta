@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 21b9de2187894460594876dcf6973095
+guid: 44cbebfe3320447ae988036c66643367
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3935513822340845865
-    second: Debris_2_0
+      213: 5156776694448688124
+    second: bar_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -97,7 +97,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WebGL
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -110,7 +110,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: Android
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Debris_2_0
+      name: bar_0
       rect:
         serializedVersion: 2
-        x: 28
-        y: 28
-        width: 83
-        height: 80
+        x: 27
+        y: 27
+        width: 398
+        height: 62
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 921144d58f0cd9630800000000000000
-      internalID: 3935513822340845865
+      spriteID: cfb80a2f41d809740800000000000000
+      internalID: 5156776694448688124
       vertices: []
       indices: 
       edges: []
@@ -160,8 +160,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Debris_2_0: 3935513822340845865
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
