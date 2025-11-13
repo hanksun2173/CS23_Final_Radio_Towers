@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      LeftToRight_CrissCross_0: -6772778405287841263
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
