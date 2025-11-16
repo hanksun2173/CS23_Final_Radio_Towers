@@ -4801,11 +4801,12 @@ GameObject:
   - component: {fileID: 1514921179}
   - component: {fileID: 1514921178}
   - component: {fileID: 1514921177}
-  - component: {fileID: 1514921181}
   - component: {fileID: 1514921182}
   - component: {fileID: 1514921183}
   - component: {fileID: 1514921185}
   - component: {fileID: 1514921184}
+  - component: {fileID: 1514921187}
+  - component: {fileID: 1514921186}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -4958,26 +4959,6 @@ Transform:
   - {fileID: 1874904362}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1514921181
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1514921176}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a22940377ee7f4f22901b12abec0fac0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  jumpForce: 12
-  groundCheck: {fileID: 790475538}
-  groundCheckRadius: 0.2
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  extraJumpsValue: 1
 --- !u!114 &1514921182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5076,6 +5057,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13641a2e7454e469c84cdef89afea04d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1514921186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1514921176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 082715609557146658bbc13e3e747b7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  Horizontal: 0
+  jumpForce: 10
+  fallMultiplier: 2.5
+  lowJumpMultiplier: 2
+  coyoteTime: 0.2
+  jumpBufferTime: 0.2
+  groundCheck: {fileID: 790475538}
+  groundCheckRadius: 0.2
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  extraJumpsValue: 2
+--- !u!114 &1514921187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1514921176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70353fb4bad274626822a07c9442b1a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeTarget: {fileID: 0}
+  durationTime: 2.5
+  magnitude: 0.3
+  shakeInterval: 30
 --- !u!1 &1588267767
 GameObject:
   m_ObjectHideFlags: 0
