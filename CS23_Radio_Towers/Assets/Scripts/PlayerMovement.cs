@@ -9,18 +9,10 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 5f;
     public float Horizontal;
     public float jumpForce = 10f;
-    
-    [Header("Jump Feel Improvements")]
-    [Tooltip("Higher gravity when falling makes jumps feel less floaty")]
     public float fallMultiplier = 2.5f;
-    [Tooltip("Reduced gravity when holding jump for variable jump height")]
     public float lowJumpMultiplier = 2f;
-    [Tooltip("Time window after leaving ground where jump still works")]
     public float coyoteTime = 0.2f;
-    [Tooltip("Time window to buffer jump input before landing")]
     public float jumpBufferTime = 0.2f;
-    
-    [Header("Ground Detection")]
     public Transform groundCheck;
     public float groundCheckRadius = 0.2f;
     public LayerMask groundLayer;
@@ -116,8 +108,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate() {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
-        
-        // Apply better jump physics for more natural feel
         ApplyBetterJumpPhysics();
     }
     

@@ -7,19 +7,10 @@ using UnityEngine.SceneManagement;
 public class GameHandler : MonoBehaviour
 {
     public static GameHandler Instance { get; private set; }
-
-    [Header("Overworld Spawn Points (MainScene)")]
-    [Tooltip("Ordered spawn positions for MainScene. Index 0 = lose/entry spawn, Index 1 = win spawn.")] 
     public Vector2[] spawnPoints;
 
-    [Tooltip("Current active spawn index (auto applied when MainScene loads)")] 
     [SerializeField] private int currentSpawnIndex = 0;
-
-    [Header("Tower Management")]
-    [Tooltip("Tracks which towers have been completed (by tower ID)")]
     public static HashSet<string> completedTowers = new HashSet<string>();
-    
-    [Tooltip("Currently active tower being played")]
     public static string currentTowerId = "";
 
     // public GameObject Health;
@@ -74,7 +65,6 @@ public class GameHandler : MonoBehaviour
         {
             Vector2 spawnPosition = spawnPoints[currentSpawnIndex];
             player.transform.position = spawnPosition;
-            Debug.Log($"[GameHandler] Player positioned at spawn index {currentSpawnIndex}: {spawnPosition}");
         }
     }
 

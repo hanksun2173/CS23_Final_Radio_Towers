@@ -37,17 +37,14 @@ public class CameraShake : MonoBehaviour{
        public void ShakeCamera(float durationTime2, float magnitude2){
               // Safety: don't shake a transform that is a parent/ancestor of the player — that would move the player
               GameObject player = GameObject.FindGameObjectWithTag("Player");
-              if (player != null && shakeTarget != null)
-              {
+              if (player != null && shakeTarget != null) {
                      // if the player is a child of the shake target, shaking the target will move the player
-                     if (player.transform.IsChildOf(shakeTarget) || player.transform == shakeTarget)
-                     {
-                        return;
-                     }
+                if (player.transform.IsChildOf(shakeTarget) || player.transform == shakeTarget) {
+                return;
+                }
               }
 
-              if (shakeTarget == null)
-              {
+              if (shakeTarget == null) {
                      return;
               }
 
