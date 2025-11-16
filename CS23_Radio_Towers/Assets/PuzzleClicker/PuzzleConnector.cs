@@ -27,7 +27,7 @@ public class PuzzleConnector : MonoBehaviour
 				}
 			}
 			else{
-				isConnectedToPower = false;
+				//isConnectedToPower = false;
 			}
 			//Debug.Log("I am connected to power!");
 		} 

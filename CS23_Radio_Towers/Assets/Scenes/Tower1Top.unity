@@ -172,7 +172,14 @@ PrefabInstance:
       value: PUZZLE_CLICKER_GAME_WITH_BOMB
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8059133927699038486, guid: 783ff0e8aceda9c43aecbcdc06de0452, type: 3}
+    - {fileID: 6592796343454222839, guid: 783ff0e8aceda9c43aecbcdc06de0452, type: 3}
+    - {fileID: 3176309323775024150, guid: 783ff0e8aceda9c43aecbcdc06de0452, type: 3}
+    - {fileID: 795947188577668264, guid: 783ff0e8aceda9c43aecbcdc06de0452, type: 3}
+    - {fileID: 7342749213193481245, guid: 783ff0e8aceda9c43aecbcdc06de0452, type: 3}
+    - {fileID: 4656400936599498805, guid: 783ff0e8aceda9c43aecbcdc06de0452, type: 3}
+    - {fileID: 2217020758204169168, guid: 783ff0e8aceda9c43aecbcdc06de0452, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 783ff0e8aceda9c43aecbcdc06de0452, type: 3}
