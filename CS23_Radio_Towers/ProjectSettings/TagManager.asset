@@ -9,6 +9,8 @@ TagManager:
   - Death
   - PauseMenu
   - Pipe
+  - Connector
+  - Rope
   layers:
   - Default
   - TransparentFX
