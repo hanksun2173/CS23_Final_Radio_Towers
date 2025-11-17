@@ -13,10 +13,9 @@ public class PlayerMovement : MonoBehaviour
     public float lowJumpMultiplier = 2f;
     public float coyoteTime = 0.2f;
     public float jumpBufferTime = 0.2f;
-    public Transform groundCheck;
-    public float groundCheckRadius = 0.2f;
-    public LayerMask groundLayer;
     public int extraJumpsValue = 2;
+    
+    private GroundCheck groundCheck;
     
     private Vector2 moveDirection;
     private float coyoteTimeCounter;
@@ -32,12 +31,16 @@ public class PlayerMovement : MonoBehaviour
     private float dashingTime = 0.2f;
     private float dashCoolDown = 1f;
 
-
-    private bool isGrounded;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start() {
-        rb = GetComponent<Rigidbody2D>();    
-        extraJumps = extraJumpsValue;    
+        rb = GetComponent<Rigidbody2D>();
+        groundCheck = GetComponent<GroundCheck>();
+        extraJumps = extraJumpsValue;
+        
+        if (groundCheck == null)
+        {
+            Debug.LogError("[PlayerMovement] GroundCheck component not found! Please add GroundCheck script to the player.");
+        }
     }
 
     // Update is called once per frame
@@ -54,6 +57,7 @@ public class PlayerMovement : MonoBehaviour
         rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
 
         // Handle coyote time (grace period after leaving ground)
+        bool isGrounded = groundCheck != null ? groundCheck.IsGrounded() : false;
         if (isGrounded)
         {
             coyoteTimeCounter = coyoteTime;
@@ -107,7 +111,6 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void FixedUpdate() {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
         ApplyBetterJumpPhysics();
     }
     

@@ -8,10 +8,6 @@ public class RopePlankAttach : MonoBehaviour
     void Start()
     {
         plankCollider = GetComponent<Collider2D>();
-        if (plankCollider == null)
-        {
-            Debug.LogWarning("[RopePlankAttach] No Collider2D found on plank!");
-        }
     }
 
     // Update is called once per frame
@@ -33,11 +29,9 @@ public class RopePlankAttach : MonoBehaviour
         {
             isOnCooldown = true;
             
-            // Disable collider during cooldown
             if (plankCollider != null)
             {
                 plankCollider.enabled = false;
-                Debug.Log("[RopePlankAttach] Plank collider disabled for cooldown");
             }
             
             // Re-enable after cooldown

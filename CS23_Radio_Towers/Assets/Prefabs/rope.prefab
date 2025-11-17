@@ -886,7 +886,7 @@ MonoBehaviour:
   bottomPlank: {fileID: 5744550786152692787}
   rb: {fileID: 9146068173973030416}
   velocityMultiplier: 1.5
-  ejectionForce: 50
+  ejectionForce: 20
   horizontalBoost: 50
 --- !u!1 &7723202230766704645
 GameObject:

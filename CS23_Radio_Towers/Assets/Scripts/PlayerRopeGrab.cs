@@ -22,6 +22,9 @@ public class PlayerRopeGrab : MonoBehaviour
             if (Input.GetButtonDown("Jump")) {
                 Rigidbody2D playerRb = player.GetComponent<Rigidbody2D>();
                 
+                // Store original position before ejection
+                Vector3 originalPosition = player.transform.position;
+                
                 Vector2 ropeVelocity = rb.linearVelocity;
                 
                 Vector2 ejectVelocity = ropeVelocity * velocityMultiplier;
@@ -33,8 +36,27 @@ public class PlayerRopeGrab : MonoBehaviour
                 float horizontalDirection = Mathf.Sign(ropeVelocity.x);
                 ejectVelocity.x += horizontalDirection * horizontalBoost;
                 
+                // Re-enable PlayerMovement first
+                PlayerMovement playerMovement = player.GetComponent<PlayerMovement>();
+                if (playerMovement != null)
+                {
+                    playerMovement.enabled = true;
+                }
+                
+                // Apply velocity after re-enabling movement
                 playerRb.linearVelocity = ejectVelocity;
-                player.GetComponent<PlayerMovement>().enabled = true;
+                
+                // Ensure player's collider is active
+                Collider2D playerCollider = player.GetComponent<Collider2D>();
+                if (playerCollider != null)
+                {
+                    playerCollider.enabled = true;
+                }
+                
+                // Add small upward offset to prevent clipping into platforms
+                player.transform.position = new Vector3(originalPosition.x, originalPosition.y + 0.1f, originalPosition.z);
+                
+                Debug.Log($"[PlayerRopeGrab] Player ejected with velocity: {ejectVelocity} from position: {player.transform.position}");
                 
                 // Start cooldown on the plank
                 RopePlankAttach plankScript = bottomPlank.GetComponent<RopePlankAttach>();
