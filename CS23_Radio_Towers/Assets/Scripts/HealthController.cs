@@ -116,13 +116,6 @@ public class HealthController : MonoBehaviour
             return;
         }
 
-        // Debris objects (damage handled by EnemyDamage script)
-        if (other.CompareTag("FallingDebris"))
-        {
-            Debug.Log("[HealthController] FallingDebris detected via trigger - damage will be handled by EnemyDamage script");
-            return;
-        }
-
         // Component-based lethal objects (legacy/explicit DeathCollider)
         if (other.GetComponent<DeathCollider>() != null)
         {
