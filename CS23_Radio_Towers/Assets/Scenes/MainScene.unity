@@ -1684,51 +1684,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerId: Tower1
   levelSceneName: RadioTower_LVL1
---- !u!1 &1415172849
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1415172851}
-  - component: {fileID: 1415172852}
-  m_Layer: 0
-  m_Name: UIBridge
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1415172851
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1415172849}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 322.93243, y: 237.73174, z: 0.2951147}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1415172852
+--- !u!114 &1415172852 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 971842955889718254, guid: 10d4c1edcf28141b98e6c6a18ef88db6, type: 3}
+  m_PrefabInstance: {fileID: 787489697621208626}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1415172849}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d5ecca3b924f48c392992f5eb67eee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 0}
 --- !u!1 &1446662645
 GameObject:
   m_ObjectHideFlags: 0
@@ -2670,11 +2636,6 @@ MonoBehaviour:
   lowJumpMultiplier: 2
   coyoteTime: 0.2
   jumpBufferTime: 0.2
-  groundCheck: {fileID: 77199716}
-  groundCheckRadius: 0.2
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 64
   extraJumpsValue: 1
 --- !u!1001 &1970251047
 PrefabInstance:
@@ -3119,6 +3080,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &787489697621208626
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4637615565007352974, guid: 10d4c1edcf28141b98e6c6a18ef88db6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 322.93243
+      objectReference: {fileID: 0}
+    - target: {fileID: 4637615565007352974, guid: 10d4c1edcf28141b98e6c6a18ef88db6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 237.73174
+      objectReference: {fileID: 0}
+    - target: {fileID: 4637615565007352974, guid: 10d4c1edcf28141b98e6c6a18ef88db6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.2951147
+      objectReference: {fileID: 0}
+    - target: {fileID: 4637615565007352974, guid: 10d4c1edcf28141b98e6c6a18ef88db6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4637615565007352974, guid: 10d4c1edcf28141b98e6c6a18ef88db6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4637615565007352974, guid: 10d4c1edcf28141b98e6c6a18ef88db6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4637615565007352974, guid: 10d4c1edcf28141b98e6c6a18ef88db6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4637615565007352974, guid: 10d4c1edcf28141b98e6c6a18ef88db6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4637615565007352974, guid: 10d4c1edcf28141b98e6c6a18ef88db6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4637615565007352974, guid: 10d4c1edcf28141b98e6c6a18ef88db6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006211763463203742, guid: 10d4c1edcf28141b98e6c6a18ef88db6, type: 3}
+      propertyPath: m_Name
+      value: UIBridge
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 10d4c1edcf28141b98e6c6a18ef88db6, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -3131,5 +3149,5 @@ SceneRoots:
   - {fileID: 1354794444}
   - {fileID: 1923074485}
   - {fileID: 1883757866}
-  - {fileID: 1415172851}
+  - {fileID: 787489697621208626}
   - {fileID: 1008397965}

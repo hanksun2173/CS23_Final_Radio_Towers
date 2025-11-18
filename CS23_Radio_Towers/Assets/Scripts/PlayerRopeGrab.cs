@@ -53,12 +53,12 @@ public class PlayerRopeGrab : MonoBehaviour
                     playerCollider.enabled = true;
                 }
                 
-                // Add small upward offset to prevent clipping into platforms
+
                 player.transform.position = new Vector3(originalPosition.x, originalPosition.y + 0.1f, originalPosition.z);
                 
                 Debug.Log($"[PlayerRopeGrab] Player ejected with velocity: {ejectVelocity} from position: {player.transform.position}");
                 
-                // Start cooldown on the plank
+
                 RopePlankAttach plankScript = bottomPlank.GetComponent<RopePlankAttach>();
                 if (plankScript != null)
                 {

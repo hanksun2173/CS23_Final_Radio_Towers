@@ -11,6 +11,7 @@ TagManager:
   - Pipe
   - Connector
   - Rope
+  - Debris
   layers:
   - Default
   - TransparentFX

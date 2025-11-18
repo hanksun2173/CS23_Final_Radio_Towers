@@ -7,13 +7,14 @@ public class EnemyDamage : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        // Use the correct casing and generic GetComponent<T>() method
-        var playerMovement = collision.gameObject.GetComponent<PlayerPlatformMovement>();
-        if (playerMovement != null)
+        // Check if this debris object has the Debris tag
+        if (this.gameObject.CompareTag("Debris"))
         {
+            // Check if colliding with player
             var healthController = collision.gameObject.GetComponent<HealthController>();
             if (healthController != null)
             {
+                Debug.Log($"[EnemyDamage] Debris dealing {_damageAmount} damage to player");
                 healthController.TakeDamage(_damageAmount);
             }
         }
