@@ -5,7 +5,7 @@ public class EnemyDamage : MonoBehaviour
     [SerializeField]
     private float _damageAmount;
 
-    private void OnCollisionStay2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         // Check if this debris object has the Debris tag
         if (this.gameObject.CompareTag("Debris"))

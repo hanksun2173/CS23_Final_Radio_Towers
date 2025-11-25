@@ -8697,7 +8697,7 @@ CompositeCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 321b54fbc758448a09ac7ecacd1cb7be, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -9158,7 +9158,7 @@ Rigidbody2D:
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 321b54fbc758448a09ac7ecacd1cb7be, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -10807,6 +10807,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3480094532337517954, guid: 2fbabd1a529984b21b5954c56cfab246, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4080748125177832133, guid: 2fbabd1a529984b21b5954c56cfab246, type: 3}
       propertyPath: m_UseLimits
       value: 1
@@ -10887,6 +10891,10 @@ PrefabInstance:
       propertyPath: m_AngleLimits.m_UpperAngle
       value: 312.75296
       objectReference: {fileID: 0}
+    - target: {fileID: 5782329453653765918, guid: 2fbabd1a529984b21b5954c56cfab246, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5839347597415388896, guid: 2fbabd1a529984b21b5954c56cfab246, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -10911,6 +10919,14 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 981271225
       objectReference: {fileID: 0}
+    - target: {fileID: 6892816277064189287, guid: 2fbabd1a529984b21b5954c56cfab246, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6978325275666060744, guid: 2fbabd1a529984b21b5954c56cfab246, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6993442540016187312, guid: 2fbabd1a529984b21b5954c56cfab246, type: 3}
       propertyPath: m_Name
       value: rope
@@ -10934,6 +10950,10 @@ PrefabInstance:
     - target: {fileID: 7736861808316455102, guid: 2fbabd1a529984b21b5954c56cfab246, type: 3}
       propertyPath: horizontalBoost
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802353499717438586, guid: 2fbabd1a529984b21b5954c56cfab246, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7841714211896770747, guid: 2fbabd1a529984b21b5954c56cfab246, type: 3}
       propertyPath: m_UseLimits
