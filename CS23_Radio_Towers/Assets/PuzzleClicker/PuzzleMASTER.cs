@@ -2,9 +2,11 @@ using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class PuzzleMASTER : MonoBehaviour
 {
+	public GameObject displayText; 
 
 	public PuzzleClicker[] thePieces; 
 	public int numberClicks = 0; //track clicks
@@ -17,6 +19,7 @@ public class PuzzleMASTER : MonoBehaviour
     void Start()
     {
 		winCanvas.SetActive(false);
+		displayText.SetActive(false);
         thePieces = FindObjectsOfType<PuzzleClicker>();
     }
 
@@ -36,6 +39,11 @@ public class PuzzleMASTER : MonoBehaviour
 
 		// Debug.Log("YOU DID IT! PUZZLE COMPLETE in " + numberClicks + " clicks!");
 	}
+
+	public void DisplayRadioMessage()
+    {
+		displayText.SetActive(true);
+    }
 
 	public void MoveToNext ()
     {
