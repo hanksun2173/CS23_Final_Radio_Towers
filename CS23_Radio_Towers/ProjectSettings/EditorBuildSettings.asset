@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/RadioTower_LVL1.unity
     guid: 1ac650e7fdf73463f902f3ca0a9125fe
   - enabled: 1
+    path: Assets/Scenes/EasyPuzzle.unity
+    guid: 6b30d608400f74e79af0082a78d728ff
+  - enabled: 1
     path: Assets/Scenes/RadioTower_LVL2.unity
     guid: 300de0965b29b40e4a537bd9940033f2
   - enabled: 1
