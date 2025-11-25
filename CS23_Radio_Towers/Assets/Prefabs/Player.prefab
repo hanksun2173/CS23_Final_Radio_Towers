@@ -187,6 +187,7 @@ GameObject:
   - component: {fileID: 6098851978069809989}
   - component: {fileID: 6395707303321277191}
   - component: {fileID: -1892741111155345407}
+  - component: {fileID: 259794264931416547}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -366,6 +367,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _currentHealth: 100
   _maximumHealth: 100
+  damageFlashDuration: 0.2
+  damageCooldown: 0.5
   isInvincible: 0
   OnDied:
     m_PersistentCalls:
@@ -457,6 +460,7 @@ MonoBehaviour:
   coyoteTime: 0.2
   jumpBufferTime: 0.2
   extraJumpsValue: 1
+  animator: {fileID: 259794264931416547}
 --- !u!114 &6395707303321277191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -492,3 +496,25 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+--- !u!95 &259794264931416547
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8610979943440432652}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 32f042e248989466583e299d57a18655, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
