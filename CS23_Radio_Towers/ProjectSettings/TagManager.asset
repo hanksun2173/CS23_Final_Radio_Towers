@@ -12,6 +12,7 @@ TagManager:
   - Connector
   - Rope
   - Debris
+  - Bridge
   layers:
   - Default
   - TransparentFX

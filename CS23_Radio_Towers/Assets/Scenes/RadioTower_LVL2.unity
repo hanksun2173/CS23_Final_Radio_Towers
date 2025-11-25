@@ -321,9 +321,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shakeTarget: {fileID: 0}
-  durationTime: 2.5
-  magnitude: 0.3
-  shakeInterval: 30
+  durationTime: 5
+  magnitude: 0.55
+  shakeInterval: 25
 --- !u!1001 &109036301
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16622,6 +16622,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bridge (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8029488013453477723, guid: 28e9ca56f886a4a579cdf9bdd735d076, type: 3}
+      propertyPath: m_TagString
+      value: Bridge
+      objectReference: {fileID: 0}
     - target: {fileID: 8983326651954696627, guid: 28e9ca56f886a4a579cdf9bdd735d076, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: 0.58399963
@@ -16813,6 +16817,10 @@ PrefabInstance:
     - target: {fileID: 8029488013453477723, guid: 28e9ca56f886a4a579cdf9bdd735d076, type: 3}
       propertyPath: m_Name
       value: bridge (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8029488013453477723, guid: 28e9ca56f886a4a579cdf9bdd735d076, type: 3}
+      propertyPath: m_TagString
+      value: Bridge
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18105,6 +18113,10 @@ PrefabInstance:
     - target: {fileID: 8029488013453477723, guid: 28e9ca56f886a4a579cdf9bdd735d076, type: 3}
       propertyPath: m_Name
       value: bridge
+      objectReference: {fileID: 0}
+    - target: {fileID: 8029488013453477723, guid: 28e9ca56f886a4a579cdf9bdd735d076, type: 3}
+      propertyPath: m_TagString
+      value: Bridge
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21113,6 +21125,10 @@ PrefabInstance:
     - target: {fileID: 8029488013453477723, guid: 28e9ca56f886a4a579cdf9bdd735d076, type: 3}
       propertyPath: m_Name
       value: bridge (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8029488013453477723, guid: 28e9ca56f886a4a579cdf9bdd735d076, type: 3}
+      propertyPath: m_TagString
+      value: Bridge
       objectReference: {fileID: 0}
     - target: {fileID: 8983326651954696627, guid: 28e9ca56f886a4a579cdf9bdd735d076, type: 3}
       propertyPath: m_ConnectedAnchor.x
