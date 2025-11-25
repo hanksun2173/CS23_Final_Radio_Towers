@@ -169,5 +169,12 @@ public class PlayerMovement : MonoBehaviour
         } else {
             animator.SetBool("isRunning", false);
         }
+
+        // Set isJump to true if player is not grounded (jumping or falling)
+        bool isGrounded = groundCheck != null ? groundCheck.IsGrounded() : false;
+        animator.SetBool("isJump", !isGrounded);
+        animator.SetBool("isDash", isDashing);
+
+        
     }
 }
