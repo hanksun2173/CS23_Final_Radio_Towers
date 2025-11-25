@@ -31,6 +31,8 @@ public class PlayerMovement : MonoBehaviour
     private float dashingTime = 0.2f;
     private float dashCoolDown = 1f;
 
+    [SerializeField] private Animator animator;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start() {
         rb = GetComponent<Rigidbody2D>();
@@ -103,6 +105,8 @@ public class PlayerMovement : MonoBehaviour
         }
         
         playerTurn();
+        HandleMovement();
+
     }
     
     private void Jump()
@@ -149,10 +153,21 @@ public class PlayerMovement : MonoBehaviour
         if ((Horizontal > 0 && !FaceRight) || (Horizontal < 0 && FaceRight))
         {
             FaceRight = !FaceRight;
-            Vector3 theScale = transform.localScale;
-            theScale.x *= -1f;
-            transform.localScale = theScale;
+        }
+        // Use SpriteRenderer.flipX for correct animation direction
+        var sr = GetComponent<SpriteRenderer>();
+        if (sr != null)
+        {
+            sr.flipX = FaceRight;
         }
        
+    }
+
+    private void HandleMovement() {
+        if (Horizontal != 0) {
+            animator.SetBool("isRunning", true);
+        } else {
+            animator.SetBool("isRunning", false);
+        }
     }
 }
