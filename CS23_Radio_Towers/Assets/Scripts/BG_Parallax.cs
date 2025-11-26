@@ -11,9 +11,18 @@ public class BG_Parallax : MonoBehaviour {
       //parallaxUpEffect;
 
       void Start(){
-            startposX = transform.position.x;
-            //startposY = transform.position.y;
-            length = GetComponent<SpriteRenderer>().bounds.size.x;
+                  startposX = transform.position.x;
+                  //startposY = transform.position.y;
+                  var sr = GetComponent<SpriteRenderer>();
+                  if (sr != null)
+                  {
+                        length = sr.bounds.size.x;
+                  }
+                  else
+                  {
+                        Debug.LogWarning($"[BG_Parallax] No SpriteRenderer found on {gameObject.name}, parallax may not work correctly.");
+                        length = 0f;
+                  }
       }
 
       void FixedUpdate(){

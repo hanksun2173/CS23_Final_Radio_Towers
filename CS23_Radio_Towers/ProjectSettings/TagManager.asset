@@ -50,6 +50,9 @@ TagManager:
   - name: OverworldBG
     uniqueID: 1460556815
     locked: 0
+  - name: OverworldBG_0
+    uniqueID: 224573223
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
