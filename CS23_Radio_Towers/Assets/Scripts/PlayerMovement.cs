@@ -71,7 +71,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // Handle jump buffering (pressing jump slightly before landing)
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow))
         {
             jumpBufferCounter = jumpBufferTime;
         }
@@ -125,7 +125,7 @@ public class PlayerMovement : MonoBehaviour
             // Falling - apply stronger gravity for snappier landings
             rb.linearVelocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.fixedDeltaTime;
         }
-        else if (rb.linearVelocity.y > 0 && !Input.GetKey(KeyCode.Space))
+        else if (rb.linearVelocity.y > 0 && !(Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.UpArrow)))
         {
             // Rising but not holding jump - apply stronger gravity for variable jump height
             rb.linearVelocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.fixedDeltaTime;
