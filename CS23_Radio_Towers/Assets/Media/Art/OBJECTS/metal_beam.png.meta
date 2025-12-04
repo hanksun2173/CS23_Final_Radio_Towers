@@ -1,0 +1,1868 @@
+fileFormatVersion: 2
+guid: 07cc0e8bb1f274b579c29fbd0bf8a615
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7473159218789144413
+    second: metal_beam_0
+  - first:
+      213: 8049076007807367491
+    second: metal_beam_1
+  - first:
+      213: -7860090826259459319
+    second: metal_beam_2
+  - first:
+      213: 8609166342335896987
+    second: metal_beam_3
+  - first:
+      213: -1395163884244654605
+    second: metal_beam_4
+  - first:
+      213: 5124573267947670894
+    second: metal_beam_5
+  - first:
+      213: 6000233779092016376
+    second: metal_beam_6
+  - first:
+      213: -3073727726770907738
+    second: metal_beam_7
+  - first:
+      213: -6073293124616727702
+    second: metal_beam_8
+  - first:
+      213: 7934268935139051402
+    second: metal_beam_9
+  - first:
+      213: -7665912773521417192
+    second: metal_beam_10
+  - first:
+      213: 2587905952824387219
+    second: metal_beam_11
+  - first:
+      213: 7791601501356442647
+    second: metal_beam_12
+  - first:
+      213: 7896983935013000820
+    second: metal_beam_13
+  - first:
+      213: -2541716001055122913
+    second: metal_beam_14
+  - first:
+      213: 5708211187490119308
+    second: metal_beam_15
+  - first:
+      213: -6752028078910592803
+    second: metal_beam_16
+  - first:
+      213: 1361058158174991336
+    second: metal_beam_17
+  - first:
+      213: 8469495733356703897
+    second: metal_beam_18
+  - first:
+      213: 4231751829689281029
+    second: metal_beam_19
+  - first:
+      213: -5843526689995135901
+    second: metal_beam_20
+  - first:
+      213: 8246888892945283084
+    second: metal_beam_21
+  - first:
+      213: -8778396225261252121
+    second: metal_beam_22
+  - first:
+      213: -2332286530570715128
+    second: metal_beam_23
+  - first:
+      213: -6821414508994477723
+    second: metal_beam_24
+  - first:
+      213: 2106379908478928281
+    second: metal_beam_25
+  - first:
+      213: 5833729859523562015
+    second: metal_beam_26
+  - first:
+      213: 2762649395251570792
+    second: metal_beam_27
+  - first:
+      213: -5348191098689528741
+    second: metal_beam_28
+  - first:
+      213: -4837407281514234168
+    second: metal_beam_29
+  - first:
+      213: -4119185422840263736
+    second: metal_beam_30
+  - first:
+      213: 5968268714932261189
+    second: metal_beam_31
+  - first:
+      213: 5994822338591610770
+    second: metal_beam_32
+  - first:
+      213: -4894075144835202957
+    second: metal_beam_33
+  - first:
+      213: 8388225541811079351
+    second: metal_beam_34
+  - first:
+      213: 6728444822737876671
+    second: metal_beam_35
+  - first:
+      213: -4032571037597627796
+    second: metal_beam_36
+  - first:
+      213: -109945421035850620
+    second: metal_beam_37
+  - first:
+      213: 6646122175093275494
+    second: metal_beam_38
+  - first:
+      213: 3007944972637578997
+    second: metal_beam_39
+  - first:
+      213: -1714886368566382848
+    second: metal_beam_40
+  - first:
+      213: -8613852396044820589
+    second: metal_beam_41
+  - first:
+      213: 6178978639654457730
+    second: metal_beam_42
+  - first:
+      213: -3929157364341493445
+    second: metal_beam_43
+  - first:
+      213: -1488555802204898438
+    second: metal_beam_44
+  - first:
+      213: -4943886288738990243
+    second: metal_beam_45
+  - first:
+      213: -1606699524091734812
+    second: metal_beam_46
+  - first:
+      213: -8520349415884455107
+    second: metal_beam_47
+  - first:
+      213: -158434328006135944
+    second: metal_beam_48
+  - first:
+      213: -1688578952864213954
+    second: metal_beam_49
+  - first:
+      213: 9146692139940092312
+    second: metal_beam_50
+  - first:
+      213: 276405697968301022
+    second: metal_beam_51
+  - first:
+      213: 2180518508207538977
+    second: metal_beam_52
+  - first:
+      213: 2325955950825251811
+    second: metal_beam_53
+  - first:
+      213: 3587713065537037566
+    second: metal_beam_54
+  - first:
+      213: 4998557460008190090
+    second: metal_beam_55
+  - first:
+      213: -2075519200983770487
+    second: metal_beam_56
+  - first:
+      213: -599212985373669693
+    second: metal_beam_57
+  - first:
+      213: 4943938990036610022
+    second: metal_beam_58
+  - first:
+      213: 4012859474489830794
+    second: metal_beam_59
+  - first:
+      213: -8651612412362842654
+    second: metal_beam_60
+  - first:
+      213: 5809074319561891683
+    second: metal_beam_61
+  - first:
+      213: 5136970611580787196
+    second: metal_beam_62
+  - first:
+      213: 1900870684274471118
+    second: metal_beam_63
+  - first:
+      213: 998449806841614494
+    second: metal_beam_64
+  - first:
+      213: 296456295586826047
+    second: metal_beam_65
+  - first:
+      213: 7964446098898239952
+    second: metal_beam_66
+  - first:
+      213: 1570106582640196988
+    second: metal_beam_67
+  - first:
+      213: 184893468817181114
+    second: metal_beam_68
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: metal_beam_0
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1259
+        width: 275
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a82326f8410a4890800000000000000
+      internalID: -7473159218789144413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_1
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 1423
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3493a77bbff04bf60800000000000000
+      internalID: 8049076007807367491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_2
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 1223
+        width: 92
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9039f7eb9095be290800000000000000
+      internalID: -7860090826259459319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_3
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 1219
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9d1e2fcc27e97770800000000000000
+      internalID: 8609166342335896987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_4
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 1220
+        width: 71
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f5a424d6d163ace0800000000000000
+      internalID: -1395163884244654605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_5
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 1223
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6dcb7d6c342e1740800000000000000
+      internalID: 5124573267947670894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_6
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 1222
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fc441cd4dc154350800000000000000
+      internalID: 6000233779092016376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_7
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 1237
+        width: 39
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a51d85faece755d0800000000000000
+      internalID: -3073727726770907738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_8
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 1218
+        width: 33
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a63d562b41457bba0800000000000000
+      internalID: -6073293124616727702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_9
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 1219
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8741671f8f2c1e60800000000000000
+      internalID: 7934268935139051402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_10
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 1236
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81c502fb2f43d9590800000000000000
+      internalID: -7665912773521417192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_11
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 1230
+        width: 38
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3966736b0c61ae320800000000000000
+      internalID: 2587905952824387219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_12
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 1218
+        width: 29
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71440c7a844512c60800000000000000
+      internalID: 7791601501356442647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_13
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 1252
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4769a638c09b79d60800000000000000
+      internalID: 7896983935013000820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_14
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 1224
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1ade2d73c20abcd0800000000000000
+      internalID: -2541716001055122913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_15
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 1219
+        width: 24
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8e5245e4d3a73f40800000000000000
+      internalID: 5708211187490119308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_16
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 1257
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd8221b6c3afb42a0800000000000000
+      internalID: -6752028078910592803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_17
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 1235
+        width: 26
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e3faa40f2373e210800000000000000
+      internalID: 1361058158174991336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_18
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 1242
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 990b9650f71b98570800000000000000
+      internalID: 8469495733356703897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_19
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 1252
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50a2d3a4ed33aba30800000000000000
+      internalID: 4231751829689281029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_20
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 1219
+        width: 22
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 364635f8f6f97eea0800000000000000
+      internalID: -5843526689995135901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_21
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 1231
+        width: 24
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c083e1611c5d27270800000000000000
+      internalID: 8246888892945283084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_22
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 1240
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e15caf942fdc2680800000000000000
+      internalID: -8778396225261252121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_23
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 1239
+        width: 24
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80087e6e1cd02afd0800000000000000
+      internalID: -2332286530570715128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_24
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 1253
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56140bd35a77551a0800000000000000
+      internalID: -6821414508994477723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_25
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 1237
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99508eedd5d5b3d10800000000000000
+      internalID: 2106379908478928281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_26
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 1221
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1acd78166295f050800000000000000
+      internalID: 5833729859523562015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_27
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 1220
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 868eae2ecf6e65620800000000000000
+      internalID: 2762649395251570792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_28
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 1220
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5c54bb188867c5b0800000000000000
+      internalID: -5348191098689528741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_29
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 1240
+        width: 69
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ceb47705b31edcb0800000000000000
+      internalID: -4837407281514234168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_30
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 1229
+        width: 32
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cb83abaea6b5d6c0800000000000000
+      internalID: -4119185422840263736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_31
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 1220
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5415d9566cc83d250800000000000000
+      internalID: 5968268714932261189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_32
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 1223
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 297545fa723e13350800000000000000
+      internalID: 5994822338591610770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_33
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 1226
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3708700f590c41cb0800000000000000
+      internalID: -4894075144835202957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_34
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 1252
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b8028300b6f86470800000000000000
+      internalID: 8388225541811079351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_35
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 1252
+        width: 23
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb67b1edaec306d50800000000000000
+      internalID: 6728444822737876671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_36
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 1252
+        width: 21
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6a077cb10e6908c0800000000000000
+      internalID: -4032571037597627796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_37
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 1254
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4843a7ad835697ef0800000000000000
+      internalID: -109945421035850620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_38
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 1254
+        width: 44
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66bf744d7e4cb3c50800000000000000
+      internalID: 6646122175093275494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_39
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 1243
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f62cfd040e5eb920800000000000000
+      internalID: 3007944972637578997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_40
+      rect:
+        serializedVersion: 2
+        x: 1065
+        y: 1182
+        width: 54
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00fe0730fef7338e0800000000000000
+      internalID: -1714886368566382848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_41
+      rect:
+        serializedVersion: 2
+        x: 1196
+        y: 1254
+        width: 122
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39fd91a42e2757880800000000000000
+      internalID: -8613852396044820589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_42
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 1246
+        width: 77
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 281945bc55420c550800000000000000
+      internalID: 6178978639654457730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_43
+      rect:
+        serializedVersion: 2
+        x: 1441
+        y: 1252
+        width: 34
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b31b0d7d134d879c0800000000000000
+      internalID: -3929157364341493445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_44
+      rect:
+        serializedVersion: 2
+        x: 1452
+        y: 1245
+        width: 26
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7bfa357266975be0800000000000000
+      internalID: -1488555802204898438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_45
+      rect:
+        serializedVersion: 2
+        x: 1479
+        y: 1246
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d57c9cd3d99c36bb0800000000000000
+      internalID: -4943886288738990243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_46
+      rect:
+        serializedVersion: 2
+        x: 1481
+        y: 1253
+        width: 29
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e419b5ab4bd3b9e0800000000000000
+      internalID: -1606699524091734812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_47
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 1244
+        width: 25
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3300085953a1c980800000000000000
+      internalID: -8520349415884455107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_48
+      rect:
+        serializedVersion: 2
+        x: 1514
+        y: 1243
+        width: 90
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87f67fe61d02dcdf0800000000000000
+      internalID: -158434328006135944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_49
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 1239
+        width: 117
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e34d35b8366f098e0800000000000000
+      internalID: -1688578952864213954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_50
+      rect:
+        serializedVersion: 2
+        x: 1763
+        y: 1237
+        width: 46
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8999cfe3a049fee70800000000000000
+      internalID: 9146692139940092312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_51
+      rect:
+        serializedVersion: 2
+        x: 1788
+        y: 1225
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed36b41948df5d300800000000000000
+      internalID: 276405697968301022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_52
+      rect:
+        serializedVersion: 2
+        x: 1796
+        y: 1238
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12300e3c702c24e10800000000000000
+      internalID: 2180518508207538977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_53
+      rect:
+        serializedVersion: 2
+        x: 1801
+        y: 1223
+        width: 29
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e325242d94774020800000000000000
+      internalID: 2325955950825251811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_54
+      rect:
+        serializedVersion: 2
+        x: 1803
+        y: 1237
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef4ec5b460e1ac130800000000000000
+      internalID: 3587713065537037566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_55
+      rect:
+        serializedVersion: 2
+        x: 1811
+        y: 1237
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a80ca21c6817e5540800000000000000
+      internalID: 4998557460008190090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_56
+      rect:
+        serializedVersion: 2
+        x: 1814
+        y: 1243
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98a1cd488464233e0800000000000000
+      internalID: -2075519200983770487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_57
+      rect:
+        serializedVersion: 2
+        x: 1831
+        y: 1235
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c6400ee6fa2fa7f0800000000000000
+      internalID: -599212985373669693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_58
+      rect:
+        serializedVersion: 2
+        x: 1831
+        y: 1224
+        width: 40
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ebe55c31566c9440800000000000000
+      internalID: 4943938990036610022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_59
+      rect:
+        serializedVersion: 2
+        x: 1843
+        y: 1238
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8de6865e6a80b730800000000000000
+      internalID: 4012859474489830794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_60
+      rect:
+        serializedVersion: 2
+        x: 1856
+        y: 1236
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ed90c2695c4fe780800000000000000
+      internalID: -8651612412362842654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_61
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 814
+        width: 1714
+        height: 362
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36f945bd05afd9050800000000000000
+      internalID: 5809074319561891683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_62
+      rect:
+        serializedVersion: 2
+        x: 1933
+        y: 939
+        width: 10
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf9d4eced8f2a4740800000000000000
+      internalID: 5136970611580787196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_63
+      rect:
+        serializedVersion: 2
+        x: 1934
+        y: 933
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec0322ce0df316a10800000000000000
+      internalID: 1900870684274471118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_64
+      rect:
+        serializedVersion: 2
+        x: 1961
+        y: 834
+        width: 21
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e901ade2fc43bdd00800000000000000
+      internalID: 998449806841614494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_65
+      rect:
+        serializedVersion: 2
+        x: 1850
+        y: 812
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3781ed1e693d1400800000000000000
+      internalID: 296456295586826047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_66
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 734
+        width: 45
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d1439d8785678e60800000000000000
+      internalID: 7964446098898239952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_67
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 735
+        width: 21
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7d75cd3e932ac510800000000000000
+      internalID: 1570106582640196988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: metal_beam_68
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 733
+        width: 57
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab9432a51afd09200800000000000000
+      internalID: 184893468817181114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
