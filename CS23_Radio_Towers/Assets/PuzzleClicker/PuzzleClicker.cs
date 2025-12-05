@@ -107,10 +107,12 @@ public class PuzzleClicker : MonoBehaviour {
 
 	//reset power (command sent by PuzzleMASTER)
 	public void TurnOffPower(){
+		Debug.Log("Hello we should be turning stuff off");
 		if (isPowerStart == false){
 			isPowered = false;
 			for (int i = 0; i < myConnectors.Length; i++){
 				myConnectors[i].isConnectedToPower = false;
+				Debug.Log("Power off");
 			}
 			IsPieceConnected();
 		}

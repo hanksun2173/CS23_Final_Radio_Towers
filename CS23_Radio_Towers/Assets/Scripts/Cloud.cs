@@ -20,10 +20,10 @@ public class Cloud : MonoBehaviour
        Vector2 pos = Vector2.Lerp((Vector2)transform.position, destination, speed * Time.fixedDeltaTime);
         transform.position = new Vector3(pos.x, pos.y, transform.position.z);
         
-        float distancetoEnd = vector3.Distance(transform.position, destination);    
+        float distancetoEnd = Vector3.Distance(transform.position, destination);    
         if (distancetoEnd <= 5)
         {
-            Destroy(gambject);
+            Destroy(gameObject);
         }
     }
 }

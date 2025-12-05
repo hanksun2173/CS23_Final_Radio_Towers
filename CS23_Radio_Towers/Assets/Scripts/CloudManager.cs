@@ -7,6 +7,7 @@ public class CloudManager : MonoBehaviour
     public GameObject[] clouds;
       private GameObject target;
       public float camSpeed = 4.0f;
+      Vector3 offset;
 
       void Start(){
             target = GameObject.FindWithTag("Player");

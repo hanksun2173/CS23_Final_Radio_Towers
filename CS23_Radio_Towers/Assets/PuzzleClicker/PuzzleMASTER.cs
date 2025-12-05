@@ -21,6 +21,7 @@ public class PuzzleMASTER : MonoBehaviour
 		winCanvas.SetActive(false);
 		displayText.SetActive(false);
         thePieces = FindObjectsOfType<PuzzleClicker>();
+		Debug.Log("Found " + thePieces.Length + "pieces");
     }
 
 	//whenever a puzzlePiece is clicked: 
