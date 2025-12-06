@@ -1,10 +1,4 @@
 using UnityEngine;
-
-/// <summary>
-/// Keep debris from colliding with ground (applies a global layer collision ignore once) and
-/// destroy debris when it touches a death collider (by layer or by explicit DeathCollider component).
-/// Attach this to debris prefabs so spawned debris inherit the behavior.
-/// </summary>
 public class DebrisIgnoreColliders : MonoBehaviour
 {
     

@@ -1517,6 +1517,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -5116154622591974616, guid: a61420614f5744cc2bab4ba2d0eb5a23, type: 3}
+      propertyPath: spawnPoints.Array.data[1].x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: -5116154622591974616, guid: a61420614f5744cc2bab4ba2d0eb5a23, type: 3}
       propertyPath: spawnPoints.Array.data[2].x
       value: 75
       objectReference: {fileID: 0}
