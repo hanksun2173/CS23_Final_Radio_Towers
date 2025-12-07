@@ -51,10 +51,16 @@ public class PuzzleMASTER : MonoBehaviour
 		if (GameHandler.Instance != null)
             {
                 // Mark the current tower as completed since player won
+                Debug.Log("[PuzzleMASTER] Marking current tower as completed...");
                 GameHandler.MarkCurrentTowerCompleted();
+                Debug.Log("[PuzzleMASTER] Tower marked complete!");
                 
                 // Set spawn point for return to MainScene
                 GameHandler.Instance.SetSpawnIndex(winSpawnIndex);
+            }
+            else
+            {
+                Debug.LogError("[PuzzleMASTER] GameHandler.Instance is null!");
             }
         SceneManager.LoadScene("MainScene");
         
