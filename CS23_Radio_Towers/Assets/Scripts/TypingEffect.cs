@@ -26,15 +26,34 @@ public class TypingEffect : MonoBehaviour
         }
     }
 
-    public void StartTyping()
+    public void StartTypingText(string text)
     {
-        // Public method to manually start typing
-        if (!string.IsNullOrEmpty(fullText))
-        {
-            StopAllCoroutines(); // Stop any existing typing
-            textMeshPro.text = string.Empty; // Clear the text
-            StartCoroutine(TypeText()); // Start typing animation
-        }
+        // Public method to start typing with new text
+        fullText = text;
+        StopAllCoroutines(); // Stop any existing typing
+        textMeshPro.text = string.Empty; // Clear the text
+        StartCoroutine(TypeText()); // Start typing animation
+    }
+
+    public void SetTextInstantly(string text)
+    {
+        // Set text without typing effect
+        StopAllCoroutines();
+        fullText = text;
+        textMeshPro.text = text;
+    }
+
+    public bool IsTyping()
+    {
+        // Check if currently typing
+        return textMeshPro.text.Length < fullText.Length;
+    }
+
+    public void CompleteTyping()
+    {
+        // Instantly complete the typing effect
+        StopAllCoroutines();
+        textMeshPro.text = fullText;
     }
 
     // Coroutine to simulate typing effect

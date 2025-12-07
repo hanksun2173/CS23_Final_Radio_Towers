@@ -10,6 +10,9 @@ public class HealthController : MonoBehaviour
     [SerializeField]
     private float _maximumHealth;
 
+    [Header("Death Settings")]
+    public int deathSpawnIndex = 0; // Spawn index to respawn at when health reaches 0
+
     private SpriteRenderer spriteRenderer;
     private Color originalColor;
     private float lastDamageTime = -999f;
@@ -71,7 +74,13 @@ public class HealthController : MonoBehaviour
 
         if (_currentHealth == 0)
         {
-            OnDied.Invoke();
+            // Handle death like DeathCollider
+            if (GameHandler.Instance != null)
+            {
+                GameHandler.Instance.SetSpawnIndex(deathSpawnIndex);
+            }
+            SceneManager.LoadScene("MainScene");
+            // Spawn applied by GameHandler on scene load
         }
         else
         {
