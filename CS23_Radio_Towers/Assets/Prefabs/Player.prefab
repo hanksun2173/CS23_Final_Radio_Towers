@@ -577,11 +577,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e665f7eb14626478c9e9e140f91dc85e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundCheckPoint: {fileID: 0}
+  groundCheckPoint: {fileID: 4614349737783069582}
   groundCheckRadius: 0.2
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  dustEffectPrefab: {fileID: 4063375143022865114, guid: 07184e29f466a4a79a9fbfded7202394, type: 3}
+  minFallSpeedForDust: 5
 --- !u!95 &259794264931416547
 Animator:
   serializedVersion: 7

@@ -7,12 +7,69 @@ public class GroundCheck : MonoBehaviour
     public float groundCheckRadius = 0.5f;
     public LayerMask groundLayer;
     
+    [Header("Landing Effects")]
+    public GameObject dustEffectPrefab; // Drag your dust animation prefab here
+    public float minFallSpeedForDust = 5f; // Minimum fall speed to trigger dust effect
+    
     private bool isGrounded;
+    private bool wasGroundedLastFrame;
+    private Rigidbody2D playerRigidbody;
+    private bool hasDustTriggered; // Track if dust already triggered for this landing
+    
+    void Start()
+    {
+        // Get the player's Rigidbody2D component to check fall speed
+        playerRigidbody = GetComponent<Rigidbody2D>();
+    }
     
     void FixedUpdate()
     {
+        // Store previous grounded state
+        wasGroundedLastFrame = isGrounded;
+        
         // Perform ground check using OverlapCircle
         isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, groundCheckRadius, groundLayer);
+        
+        // Reset dust trigger when player becomes airborne
+        if (!isGrounded && wasGroundedLastFrame)
+        {
+            hasDustTriggered = false;
+        }
+        
+        // Check if player just landed (wasn't grounded last frame, but is now)
+        if (isGrounded && !wasGroundedLastFrame && !hasDustTriggered)
+        {
+            CheckForLandingEffect();
+        }
+    }
+    
+    void CheckForLandingEffect()
+    {
+        // Only create dust effect if player was falling fast enough
+        if (playerRigidbody != null && playerRigidbody.linearVelocity.y <= -minFallSpeedForDust)
+        {
+            SpawnDustEffect();
+            hasDustTriggered = true; // Mark that dust has been triggered for this landing
+        }
+    }
+    
+    void SpawnDustEffect()
+    {
+        if (dustEffectPrefab != null)
+        {
+            // Center the dust effect at the player's position
+            Vector3 dustPosition = transform.position;
+            
+            // Instantiate dust effect like in PaddleMove example
+            GameObject dustFX = Instantiate(dustEffectPrefab, dustPosition, Quaternion.identity);
+            StartCoroutine(DestroyDustVFX(dustFX));
+        }
+    }
+    
+    System.Collections.IEnumerator DestroyDustVFX(GameObject theEffect)
+    {
+        yield return new WaitForSeconds(1f); // Adjust timing as needed
+        Destroy(theEffect);
     }
     
     // Public method for other scripts to check if player is grounded
