@@ -106,7 +106,8 @@ public class GameHandler : MonoBehaviour
         currentSpawnIndex = 0;
         // Reset all tower states when starting new game
         ResetAllTowers();
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene("TutorialLvl");
+        //SceneManager.LoadScene("MainScene");
     }
 
     public void Credits(){

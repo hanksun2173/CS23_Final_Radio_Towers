@@ -5,6 +5,7 @@ public class EnterTower : MonoBehaviour
 {
     public string towerId = "Tower1";
     public string levelSceneName = "RadioTower_LVL1";
+    public string mainSceneName = "MainScene";
     
     void Start()
     {
@@ -25,6 +26,15 @@ public class EnterTower : MonoBehaviour
             
             // Load the level scene
             SceneManager.LoadScene(levelSceneName);
+        }
+    }
+
+    private void OnTriggerEnterMain(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            // Load the main scene
+            SceneManager.LoadScene(mainSceneName);
         }
     }
 }
