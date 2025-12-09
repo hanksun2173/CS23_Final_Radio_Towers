@@ -2,30 +2,82 @@ using UnityEngine;
 
 public class MovingPlatform : MonoBehaviour
 {
+    [Header("Platform Movement")]
     public float speed = 2f;
     public Transform[] points;
     private int i;
+    
+    [Header("Lever Control")]
+    [SerializeField] private bool isMoving = false; // Platform starts still
+    public GameObject leverObject; // Reference to the lever GameObject
+    
+    private Animator leverAnimator;
+    private bool leverActivated = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         transform.position = points[0].position;
         
+        // Ensure platform starts still
+        isMoving = false;
+        leverActivated = false;
+        
+        // Get lever animator if lever object is assigned
+        if (leverObject != null)
+        {
+            leverAnimator = leverObject.GetComponent<Animator>();
+            
+            // Add the lever trigger script to the lever object
+            LeverTrigger leverTrigger = leverObject.GetComponent<LeverTrigger>();
+            if (leverTrigger == null)
+            {
+                leverTrigger = leverObject.AddComponent<LeverTrigger>();
+            }
+            leverTrigger.movingPlatform = this;
+        }
+        
+        Debug.Log($"[MovingPlatform] Initialized - isMoving: {isMoving}, leverActivated: {leverActivated}");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Vector2.Distance(transform.position, points[i].position) < 0.01f)
+        // Only move if lever has been activated
+        if (isMoving)
         {
-            i++;
-            if (i >= points.Length)
+            if (Vector2.Distance(transform.position, points[i].position) < 0.01f)
             {
-                i = 0;
+                i++;
+                if (i >= points.Length)
+                {
+                    i = 0;
+                }
             }
-        }
 
-        transform.position = Vector2.MoveTowards(transform.position, points[i].position, speed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, points[i].position, speed * Time.deltaTime);
+        }
+    }
+    
+    public void ActivateLever()
+    {
+        if (leverActivated) return; // Prevent multiple activations
+        
+        leverActivated = true;
+        isMoving = true;
+        
+        // Use boolean parameter for Animator
+        if (leverAnimator != null && leverAnimator.runtimeAnimatorController != null)
+        {
+            leverAnimator.SetBool("IsActivated", true);
+            Debug.Log("[MovingPlatform] Setting lever IsActivated to true");
+        }
+        else
+        {
+            Debug.LogWarning("[MovingPlatform] Lever Animator or AnimatorController not found!");
+        }
+        
+        Debug.Log("[MovingPlatform] Lever activated! Platform starting to move.");
     }
 
     // Unity message methods are case-sensitive: use OnCollisionEnter2D / OnCollisionExit2D
@@ -78,6 +130,29 @@ public class MovingPlatform : MonoBehaviour
             {
                 Debug.LogWarning($"[MovingPlatform] Could not unparent player: {e.Message}");
             }
+        }
+    }
+}
+
+// Helper class for lever collision detection
+public class LeverTrigger : MonoBehaviour
+{
+    [HideInInspector]
+    public MovingPlatform movingPlatform;
+    
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player") && movingPlatform != null)
+        {
+            movingPlatform.ActivateLever();
+        }
+    }
+    
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Player") && movingPlatform != null)
+        {
+            movingPlatform.ActivateLever();
         }
     }
 }
