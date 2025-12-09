@@ -73,10 +73,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 981271225
+  m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4865639045389544332, guid: e39f619429e8a44a79c249f0ec02f712, type: 3}
+  m_Sprite: {fileID: -1972596642546582407, guid: 767ff5eadde8c4777882b161391013f4, type: 3}
   m_Color: {r: 0.7924528, g: 0.61839736, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -160,10 +160,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 981271225
+  m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4865639045389544332, guid: e39f619429e8a44a79c249f0ec02f712, type: 3}
+  m_Sprite: {fileID: 864887129, guid: 767ff5eadde8c4777882b161391013f4, type: 3}
   m_Color: {r: 0.7924528, g: 0.61839736, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -247,10 +247,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 981271225
+  m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4865639045389544332, guid: e39f619429e8a44a79c249f0ec02f712, type: 3}
+  m_Sprite: {fileID: -426414800, guid: 767ff5eadde8c4777882b161391013f4, type: 3}
   m_Color: {r: 0.7924528, g: 0.61839736, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -307,7 +307,6 @@ GameObject:
   - component: {fileID: 4095530328109177837}
   - component: {fileID: 525382230920738687}
   - component: {fileID: 8391095442578477960}
-  - component: {fileID: 2054173548474517544}
   - component: {fileID: 3893482159532254331}
   m_Layer: 6
   m_Name: Container
@@ -366,7 +365,7 @@ BoxCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0.4972639, y: 0}
@@ -424,51 +423,6 @@ MonoBehaviour:
   points:
   - {fileID: 3150909236319997656}
   - {fileID: 6281697295542659419}
---- !u!66 &2054173548474517544
-CompositeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5423681143298429284}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 321b54fbc758448a09ac7ecacd1cb7be, type: 2}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 1
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_GeometryType: 1
-  m_GenerationType: 0
-  m_EdgeRadius: 0
-  m_ColliderPaths: []
-  m_CompositePaths:
-    m_Paths: []
-  m_VertexDistance: 0.0005
-  m_OffsetDistance: 0.00005
-  m_UseDelaunayMesh: 0
-  m_CompositeGameObject: {fileID: 5423681143298429284}
 --- !u!251 &3893482159532254331
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -623,10 +577,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 981271225
+  m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4865639045389544332, guid: e39f619429e8a44a79c249f0ec02f712, type: 3}
+  m_Sprite: {fileID: -2099818010, guid: 767ff5eadde8c4777882b161391013f4, type: 3}
   m_Color: {r: 0.7924528, g: 0.61839736, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0

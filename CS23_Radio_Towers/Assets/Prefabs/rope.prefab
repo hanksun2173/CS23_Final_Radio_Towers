@@ -841,7 +841,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4853704487384684062}
   - component: {fileID: 7736861808316455102}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: rope
   m_TagString: Rope
   m_Icon: {fileID: 0}
