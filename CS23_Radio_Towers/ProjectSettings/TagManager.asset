@@ -63,6 +63,9 @@ TagManager:
   - name: Ground
     uniqueID: 981271225
     locked: 0
+  - name: SupportBeams
+    uniqueID: 1885949967
+    locked: 0
   - name: Player
     uniqueID: 2884032857
     locked: 0

@@ -140,19 +140,53 @@ public class LeverTrigger : MonoBehaviour
     [HideInInspector]
     public MovingPlatform movingPlatform;
     
+    private bool playerInRange = false;
+    
+    private void Update()
+    {
+        // Check for L key press when player is in range
+        if (playerInRange && Input.GetKeyDown(KeyCode.L))
+        {
+            if (movingPlatform != null)
+            {
+                movingPlatform.ActivateLever();
+            }
+        }
+    }
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && movingPlatform != null)
+        if (other.CompareTag("Player"))
         {
-            movingPlatform.ActivateLever();
+            playerInRange = true;
+            Debug.Log("[LeverTrigger] Player in range - Press L to activate lever");
+        }
+    }
+    
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerInRange = false;
+            Debug.Log("[LeverTrigger] Player left lever range");
         }
     }
     
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Player") && movingPlatform != null)
+        if (other.gameObject.CompareTag("Player"))
         {
-            movingPlatform.ActivateLever();
+            playerInRange = true;
+            Debug.Log("[LeverTrigger] Player in range - Press L to activate lever");
+        }
+    }
+    
+    private void OnCollisionExit2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            playerInRange = false;
+            Debug.Log("[LeverTrigger] Player left lever range");
         }
     }
 }
