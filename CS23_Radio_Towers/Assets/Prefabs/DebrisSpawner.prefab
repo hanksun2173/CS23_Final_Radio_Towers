@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4928308827459679420}
   - component: {fileID: 853852185054550155}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DebrisSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 301e1ddc4aaa84298965d5253c4e7672, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _debrisPrefab: {fileID: 5126547753330224755, guid: 846980f1b6c304f8097bef229c933065, type: 3}
-  _minimumSpawnTime: 4
-  _maximumSpawnTime: 7
+  _debrisGameObject: {fileID: 4116724775382409815, guid: 1594eeee1a64c4a91a938b7c600ebbae, type: 3}
+  _minimumSpawnTime: 7
+  _maximumSpawnTime: 15
+  maxDebrisCount: 5

@@ -144,13 +144,10 @@ public class LeverTrigger : MonoBehaviour
     
     private void Update()
     {
-        // Check for L key press when player is in range
-        if (playerInRange && Input.GetKeyDown(KeyCode.L))
+        // Only check input if player is in range - more efficient
+        if (playerInRange && Input.GetKeyDown(KeyCode.L) && movingPlatform != null)
         {
-            if (movingPlatform != null)
-            {
-                movingPlatform.ActivateLever();
-            }
+            movingPlatform.ActivateLever();
         }
     }
     

@@ -5,16 +5,15 @@ public class EnemyDamage : MonoBehaviour
     [SerializeField]
     private float _damageAmount;
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         // Check if this debris object has the Debris tag
         if (this.gameObject.CompareTag("Debris"))
         {
-            // Check if colliding with player
-            var healthController = collision.gameObject.GetComponent<HealthController>();
+            // Check if triggering with player
+            var healthController = other.gameObject.GetComponent<HealthController>();
             if (healthController != null)
             {
-                Debug.Log($"[EnemyDamage] Debris dealing {_damageAmount} damage to player");
                 healthController.TakeDamage(_damageAmount);
             }
         }

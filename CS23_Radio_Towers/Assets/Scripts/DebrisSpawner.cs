@@ -3,34 +3,35 @@ using UnityEngine;
 public class DebrisSpawner : MonoBehaviour
 {
     [SerializeField]
-    private GameObject _debrisPrefab;
+    private GameObject _debrisGameObject;
 
     [SerializeField]
-    private float _minimumSpawnTime;
+    private float _minimumSpawnTime = 5f; // Much slower spawning
 
     [SerializeField]
-    private float _maximumSpawnTime;
+    private float _maximumSpawnTime = 10f;
 
+    [SerializeField]
+    private int maxDebrisCount = 10; // Limit total debris in scene
 
     private float _timeUntilSpawn;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
         SetTimerUntilSpawn();
-        
     }
 
-    // Update is called once per frame
     void Update()
     {
         _timeUntilSpawn -= Time.deltaTime;
         if (_timeUntilSpawn <= 0f)
         {
-            Instantiate(_debrisPrefab, transform.position, Quaternion.identity);
+            if (_debrisGameObject != null)
+            {
+                GameObject newDebris = Instantiate(_debrisGameObject, transform.position, Quaternion.identity);
+            }
             SetTimerUntilSpawn();
         }
-
     }
     
     private void SetTimerUntilSpawn()
