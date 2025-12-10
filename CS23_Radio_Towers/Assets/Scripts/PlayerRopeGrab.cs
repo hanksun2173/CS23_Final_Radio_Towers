@@ -59,6 +59,7 @@ public class PlayerRopeGrab : MonoBehaviour
                 Debug.Log($"[PlayerRopeGrab] Player ejected with velocity: {ejectVelocity} from position: {player.transform.position}");
                 
 
+                // Only call StartCooldown on RopePlankAttach
                 RopePlankAttach plankScript = bottomPlank.GetComponent<RopePlankAttach>();
                 if (plankScript != null)
                 {
