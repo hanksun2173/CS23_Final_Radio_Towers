@@ -189,6 +189,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f19ea602a2ae44ce8379318ea0ee149, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alertDistance: 8
+  alertDistance: 15
   exclamationMarkPrefab: {fileID: 3630964583483467994, guid: 9298a4b9c371e458d8c2c32d6fc10263, type: 3}
-  alertDuration: 2
+  alertDuration: 1

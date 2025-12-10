@@ -27,7 +27,8 @@ public class DebrisDistanceAlert : MonoBehaviour
     {
         if (exclamationMarkPrefab != null)
         {
-            Vector3 alertPos = playerPosition + new Vector3(0, 2f, 0); // 2 units above player
+            // Alert appears at debris's x, player's y + offset, player's z
+            Vector3 alertPos = new Vector3(transform.position.x, playerPosition.y + 3.5f, playerPosition.z);
             GameObject alert = Instantiate(exclamationMarkPrefab, alertPos, Quaternion.identity);
             Destroy(alert, alertDuration);
         }
