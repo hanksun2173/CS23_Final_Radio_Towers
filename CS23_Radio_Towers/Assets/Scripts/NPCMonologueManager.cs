@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine.UI;
 
 public class NPCMonologueManager : MonoBehaviour {
+       private PlayerMovement playerMovement;
 
        public GameObject monologueBox;
        public TMP_Text monologueText;
@@ -17,8 +18,13 @@ public class NPCMonologueManager : MonoBehaviour {
        private Coroutine typingCoroutine;
 
        void Start(){
-              monologueBox.SetActive(false);
-              monologueLength = monologue.Length; //allows us test dialogue without an NPC
+                       monologueBox.SetActive(false);
+                       monologueLength = monologue.Length; //allows us test dialogue without an NPC
+                       GameObject player = GameObject.FindWithTag("Player");
+                       if (player != null)
+                       {
+                              playerMovement = player.GetComponent<PlayerMovement>();
+                       }
        }
 
        void Update(){
@@ -31,21 +37,36 @@ public class NPCMonologueManager : MonoBehaviour {
                      monologueText.text = "..."; //reset text
                      counter = 0; //reset counter
               }
+
+              // Space bar skips to end of line if typing
+              if (Input.GetKeyDown(KeyCode.Space) && isTyping)
+              {
+                     CompleteTyping();
+              }
        }
 
        public void OpenMonologue(){
-              monologueBox.SetActive(true);
- 
-              //auto-loads the first line of monologue with typing effect
-              StartTyping(monologue[0]);
-              counter = 1;
+                       monologueBox.SetActive(true);
+                       // Disable player movement
+                       if (playerMovement != null)
+                       {
+                              playerMovement.enabled = false;
+                       }
+                       //auto-loads the first line of monologue with typing effect
+                       StartTyping(monologue[0]);
+                       counter = 1;
        }
 
        public void CloseMonologue(){
-              StopTyping();
-              monologueBox.SetActive(false);
-              monologueText.text = "..."; //reset text
-              counter = 0; //reset counter
+                       StopTyping();
+                       monologueBox.SetActive(false);
+                       monologueText.text = "..."; //reset text
+                       counter = 0; //reset counter
+                       // Re-enable player movement
+                       if (playerMovement != null)
+                       {
+                              playerMovement.enabled = true;
+                       }
        }
 
        public void LoadMonologueArray(string[] NPCscript, int scriptLength){
@@ -70,6 +91,11 @@ public class NPCMonologueManager : MonoBehaviour {
                      monologueBox.SetActive(false); //turn off the dialogue display
                      monologueText.text = "..."; //reset text
                      counter = 0; //reset counter
+                     // Re-enable player movement
+                     if (playerMovement != null)
+                     {
+                         playerMovement.enabled = true;
+                     }
               }
        }
 
@@ -96,7 +122,11 @@ public class NPCMonologueManager : MonoBehaviour {
        private void CompleteTyping()
        {
               StopTyping();
-              // The text will be completed in the coroutine's finally block
+              // Instantly show the full line
+              if (counter > 0 && counter <= monologue.Length)
+              {
+                     monologueText.text = monologue[counter - 1];
+              }
        }
 
        // Coroutine to simulate typing effect

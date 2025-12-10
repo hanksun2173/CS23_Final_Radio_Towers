@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 45
   m_Sprite: {fileID: -1972596642546582407, guid: 767ff5eadde8c4777882b161391013f4, type: 3}
-  m_Color: {r: 0.7924528, g: 0.61839736, b: 0, a: 1}
+  m_Color: {r: 0.9811321, g: 0.8047189, b: 0.17123532, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -164,7 +164,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 45
   m_Sprite: {fileID: 864887129, guid: 767ff5eadde8c4777882b161391013f4, type: 3}
-  m_Color: {r: 0.7924528, g: 0.61839736, b: 0, a: 1}
+  m_Color: {r: 0.9811321, g: 0.8047189, b: 0.17123532, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -251,7 +251,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 45
   m_Sprite: {fileID: -426414800, guid: 767ff5eadde8c4777882b161391013f4, type: 3}
-  m_Color: {r: 0.7924528, g: 0.61839736, b: 0, a: 1}
+  m_Color: {r: 0.9811321, g: 0.8047189, b: 0.17123532, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -423,6 +423,8 @@ MonoBehaviour:
   points:
   - {fileID: 3150909236319997656}
   - {fileID: 6281697295542659419}
+  isMoving: 0
+  leverObject: {fileID: 0}
 --- !u!251 &3893482159532254331
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -581,7 +583,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 45
   m_Sprite: {fileID: -2099818010, guid: 767ff5eadde8c4777882b161391013f4, type: 3}
-  m_Color: {r: 0.7924528, g: 0.61839736, b: 0, a: 1}
+  m_Color: {r: 0.9811321, g: 0.8047189, b: 0.17123532, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
