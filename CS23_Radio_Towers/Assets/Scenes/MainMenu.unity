@@ -1514,18 +1514,30 @@ PrefabInstance:
       objectReference: {fileID: 1878659331}
     - target: {fileID: -5116154622591974616, guid: a61420614f5744cc2bab4ba2d0eb5a23, type: 3}
       propertyPath: spawnPoints.Array.size
-      value: 3
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -5116154622591974616, guid: a61420614f5744cc2bab4ba2d0eb5a23, type: 3}
+      propertyPath: spawnPoints.Array.data[0].x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -5116154622591974616, guid: a61420614f5744cc2bab4ba2d0eb5a23, type: 3}
       propertyPath: spawnPoints.Array.data[1].x
-      value: 50
+      value: 127
       objectReference: {fileID: 0}
     - target: {fileID: -5116154622591974616, guid: a61420614f5744cc2bab4ba2d0eb5a23, type: 3}
       propertyPath: spawnPoints.Array.data[2].x
-      value: 75
+      value: 140
       objectReference: {fileID: 0}
     - target: {fileID: -5116154622591974616, guid: a61420614f5744cc2bab4ba2d0eb5a23, type: 3}
       propertyPath: spawnPoints.Array.data[2].y
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: -5116154622591974616, guid: a61420614f5744cc2bab4ba2d0eb5a23, type: 3}
+      propertyPath: spawnPoints.Array.data[3].x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: -5116154622591974616, guid: a61420614f5744cc2bab4ba2d0eb5a23, type: 3}
+      propertyPath: spawnPoints.Array.data[3].y
       value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 1953262475305927254, guid: a61420614f5744cc2bab4ba2d0eb5a23, type: 3}
