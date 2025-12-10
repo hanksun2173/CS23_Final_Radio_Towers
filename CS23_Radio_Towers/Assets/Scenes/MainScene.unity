@@ -14584,11 +14584,7 @@ MonoBehaviour:
     rid: 6272382371310338331
   m_ShadowCastingSource: 2
   m_ShadowMesh:
-<<<<<<< Updated upstream
     m_Mesh: {fileID: 117064822}
-=======
-    m_Mesh: {fileID: 490539824}
->>>>>>> Stashed changes
     m_LocalBounds:
       m_Center: {x: 0, y: 0, z: 0}
       m_Extent: {x: 2.2599945, y: 7.0849915, z: 0}

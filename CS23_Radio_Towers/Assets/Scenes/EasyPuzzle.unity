@@ -497,6 +497,10 @@ PrefabInstance:
       propertyPath: displayText
       value: 
       objectReference: {fileID: 894544408}
+    - target: {fileID: 2264133326532201865, guid: 4ef517a7f24f14f159694e887085eeac, type: 3}
+      propertyPath: winSpawnIndex
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2594366090628582643, guid: 4ef517a7f24f14f159694e887085eeac, type: 3}
       propertyPath: m_Name
       value: PUZZLE_CLICKER_EASY
