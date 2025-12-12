@@ -1661,6 +1661,10 @@ PrefabInstance:
       propertyPath: displayText
       value: 
       objectReference: {fileID: 1518921353}
+    - target: {fileID: 313069029167430059, guid: dcc832b9d665b4825941bc4ed6eebceb, type: 3}
+      propertyPath: winSpawnIndex
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8436488538705762582, guid: dcc832b9d665b4825941bc4ed6eebceb, type: 3}
       propertyPath: m_Name
       value: PUZZLE_CLICKER_BASIC2
@@ -1778,6 +1782,17 @@ PrefabInstance:
       addedObject: {fileID: 1105998555}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dcc832b9d665b4825941bc4ed6eebceb, type: 3}
+--- !u!114 &1338609742 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 313069029167430059, guid: dcc832b9d665b4825941bc4ed6eebceb, type: 3}
+  m_PrefabInstance: {fileID: 1338609741}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a28f7c3f8dc43a4ebda7f9947004b05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1363463736
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1922,6 +1937,22 @@ PrefabInstance:
     - target: {fileID: 127969794023185415, guid: dc8605d3c08904a5180c01310c693e15, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3290676949044966546, guid: dc8605d3c08904a5180c01310c693e15, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1338609742}
+    - target: {fileID: 3290676949044966546, guid: dc8605d3c08904a5180c01310c693e15, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MoveToNext
+      objectReference: {fileID: 0}
+    - target: {fileID: 4003942214575497135, guid: dc8605d3c08904a5180c01310c693e15, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1338609742}
+    - target: {fileID: 4003942214575497135, guid: dc8605d3c08904a5180c01310c693e15, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DisplayRadioMessage
       objectReference: {fileID: 0}
     - target: {fileID: 6718205071000190511, guid: dc8605d3c08904a5180c01310c693e15, type: 3}
       propertyPath: m_Name

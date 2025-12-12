@@ -51,6 +51,19 @@ public class NPCMonologueManager : MonoBehaviour {
                        if (playerMovement != null)
                        {
                               playerMovement.enabled = false;
+                              // Set player to neutral (idle) state
+                              Rigidbody2D rb = playerMovement.GetComponent<Rigidbody2D>();
+                              if (rb != null)
+                              {
+                                  rb.linearVelocity = Vector2.zero;
+                              }
+                              Animator animator = playerMovement.GetComponent<Animator>();
+                              if (animator != null)
+                              {
+                                  animator.SetBool("isRunning", false);
+                                  animator.SetBool("isJump", false);
+                                  animator.SetBool("isDash", false);
+                              }
                        }
                        //auto-loads the first line of monologue with typing effect
                        StartTyping(monologue[0]);

@@ -543,6 +543,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3290676949044966546, guid: dc8605d3c08904a5180c01310c693e15, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4017512536008290132}
+    - target: {fileID: 3290676949044966546, guid: dc8605d3c08904a5180c01310c693e15, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MoveToNext
+      objectReference: {fileID: 0}
+    - target: {fileID: 4003942214575497135, guid: dc8605d3c08904a5180c01310c693e15, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4017512536008290132}
+    - target: {fileID: 4003942214575497135, guid: dc8605d3c08904a5180c01310c693e15, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DisplayRadioMessage
+      objectReference: {fileID: 0}
     - target: {fileID: 6718205071000190511, guid: dc8605d3c08904a5180c01310c693e15, type: 3}
       propertyPath: m_Name
       value: Win
@@ -568,6 +584,10 @@ PrefabInstance:
       propertyPath: displayText
       value: 
       objectReference: {fileID: 1687341796}
+    - target: {fileID: 5919008856041818403, guid: 81c864edef76246ae93424ebdc202da1, type: 3}
+      propertyPath: winSpawnIndex
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7421396568073681861, guid: 81c864edef76246ae93424ebdc202da1, type: 3}
       propertyPath: m_Name
       value: PUZZLE_CLICKER_BASIC
@@ -617,6 +637,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81c864edef76246ae93424ebdc202da1, type: 3}
+--- !u!114 &4017512536008290132 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5919008856041818403, guid: 81c864edef76246ae93424ebdc202da1, type: 3}
+  m_PrefabInstance: {fileID: 4017512536008290131}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a28f7c3f8dc43a4ebda7f9947004b05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -624,6 +655,6 @@ SceneRoots:
   - {fileID: 687550687}
   - {fileID: 1260439389}
   - {fileID: 1808971605}
-  - {fileID: 4017512536008290131}
   - {fileID: 1296880816}
   - {fileID: 688121641}
+  - {fileID: 4017512536008290131}
