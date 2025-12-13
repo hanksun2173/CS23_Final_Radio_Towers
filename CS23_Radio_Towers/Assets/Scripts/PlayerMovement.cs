@@ -32,6 +32,11 @@ public class PlayerMovement : MonoBehaviour
     private float dashCoolDown = 1f;
 
     [SerializeField] private Animator animator;
+    [SerializeField] private AudioSource footstepSource;
+    [SerializeField] private AudioClip[] footstepClips;
+    [SerializeField] private float stepInterval = 0.4f;
+
+private float stepTimer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start() {
@@ -64,10 +69,20 @@ public class PlayerMovement : MonoBehaviour
         {
             coyoteTimeCounter = coyoteTime;
             extraJumps = extraJumpsValue;
+            if (Mathf.Abs(Horizontal) > 0.1f && !isDashing)
+            {
+                stepTimer -= Time.deltaTime;
+                    if (stepTimer <= 0f)
+                    {
+                        PlayFootstep();
+                        stepTimer = stepInterval;
+                    }
+            }
         }
         else
         {
             coyoteTimeCounter -= Time.deltaTime;
+            stepTimer = 0f;
         }
 
         // Handle jump buffering (pressing jump slightly before landing)
@@ -176,5 +191,12 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("isDash", isDashing);
 
         
+    }
+
+    void PlayFootstep()
+    {
+        if (footstepClips.Length == 0) return;
+        AudioClip clip = footstepClips[Random.Range(0, footstepClips.Length)];
+        footstepSource.PlayOneShot(clip);
     }
 }
