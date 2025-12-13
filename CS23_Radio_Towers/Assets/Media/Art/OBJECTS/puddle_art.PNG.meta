@@ -1,25 +1,16 @@
 fileFormatVersion: 2
-guid: 192bb38762bdf4fa690b90e402a7dec4
+guid: 196d399a49f2149e0a158440aa3c116c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4098823163760067679
-    second: house_1_0
+      213: 5335431456781759504
+    second: Untitled_Artwork 100_0
   - first:
-      213: 6626126127285872089
-    second: house_1_1
+      213: 8786788173028925209
+    second: Untitled_Artwork 100_1
   - first:
-      213: 5318133407649108324
-    second: house_1_2
-  - first:
-      213: -227925059798535927
-    second: house_1_3
-  - first:
-      213: -6368190868047201318
-    second: house_1_4
-  - first:
-      213: -1326637014320282479
-    second: house_1_5
+      213: 4182378187141915487
+    second: Untitled_Artwork 100_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -112,19 +103,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -141,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: house_1_0
+      name: Untitled_Artwork 100_0
       rect:
         serializedVersion: 2
-        x: 425
-        y: 1509
-        width: 44
-        height: 21
+        x: 240
+        y: 255
+        width: 1544
+        height: 366
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,107 +134,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1ab30fe8c0e0e17c0800000000000000
-      internalID: -4098823163760067679
+      spriteID: 014fbe044a24b0a40800000000000000
+      internalID: 5335431456781759504
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: house_1_1
+      name: Untitled_Artwork 100_1
       rect:
         serializedVersion: 2
-        x: 468
-        y: 1502
-        width: 19
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9d52fc52b9ab4fb50800000000000000
-      internalID: 6626126127285872089
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: house_1_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 190
-        width: 1988
-        height: 1313
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4611017582ecdc940800000000000000
-      internalID: 5318133407649108324
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: house_1_3
-      rect:
-        serializedVersion: 2
-        x: 1985
-        y: 556
-        width: 10
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9017c4f9d5f36dcf0800000000000000
-      internalID: -227925059798535927
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: house_1_4
-      rect:
-        serializedVersion: 2
-        x: 1994
-        y: 538
-        width: 12
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: adbf8284524af97a0800000000000000
-      internalID: -6368190868047201318
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: house_1_5
-      rect:
-        serializedVersion: 2
-        x: 1983
-        y: 444
-        width: 24
+        x: 405
+        y: 185
+        width: 30
         height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -266,8 +156,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1940e8f0aa6d69de0800000000000000
-      internalID: -1326637014320282479
+      spriteID: 91f1ef9f941f0f970800000000000000
+      internalID: 8786788173028925209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Untitled_Artwork 100_2
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 122
+        width: 101
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f53afe05dcaca0a30800000000000000
+      internalID: 4182378187141915487
       vertices: []
       indices: 
       edges: []
@@ -286,12 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      house_1_0: -4098823163760067679
-      house_1_1: 6626126127285872089
-      house_1_2: 5318133407649108324
-      house_1_3: -227925059798535927
-      house_1_4: -6368190868047201318
-      house_1_5: -1326637014320282479
+      Untitled_Artwork 100_0: 5335431456781759504
+      Untitled_Artwork 100_1: 8786788173028925209
+      Untitled_Artwork 100_2: 4182378187141915487
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
