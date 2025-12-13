@@ -5,6 +5,7 @@ public class PauseMenu : MonoBehaviour
     [Header("Pause Menu Setup")]
     [Tooltip("The pause menu UI GameObject (usually a Panel)")]
     public GameObject pauseMenuUI;
+    public UnityEngine.Video.VideoPlayer videoPlayer;
     
     public static bool GameIsPaused = false;
     
@@ -43,6 +44,7 @@ public class PauseMenu : MonoBehaviour
         {
             pauseMenuUI.SetActive(true);
             Time.timeScale = 0f;
+            videoPlayer.Pause();
             GameIsPaused = true;
             Debug.Log("[PauseMenu] Game paused");
         }
@@ -59,6 +61,7 @@ public class PauseMenu : MonoBehaviour
             pauseMenuUI.SetActive(false);
         }
         Time.timeScale = 1f;
+        videoPlayer.Play();
         GameIsPaused = false;
         Debug.Log("[PauseMenu] Game resumed");
     }
