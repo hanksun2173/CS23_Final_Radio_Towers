@@ -2,50 +2,52 @@ using UnityEngine;
 
 public class RopePlankAttach : MonoBehaviour
 {
+    // --- Cooldown State ---
     private bool isOnCooldown = false;
     private float cooldownDuration = 1f;
     private Collider2D plankCollider;
+
+    /**
+     * Initialize the plank's collider reference.
+     */
     void Start()
     {
         plankCollider = GetComponent<Collider2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    /**
+     * Handles player grabbing the rope plank.
+     * Disables player movement and sets the player reference in PlayerRopeGrab.
+     */
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        
-    }
-
-    void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.CompareTag("Player") && !isOnCooldown) {
+        if (collision.CompareTag("Player") && !isOnCooldown)
+        {
             transform.parent.GetComponent<PlayerRopeGrab>().player = collision.gameObject;
             collision.gameObject.GetComponent<PlayerMovement>().enabled = false;
         }
     }
-    
+
+    /**
+     * Starts cooldown for all planks in the rope, disabling their colliders.
+     */
     public void StartCooldown()
     {
-        if (!isOnCooldown)
+        if (isOnCooldown) return;
+        isOnCooldown = true;
+        RopePlankAttach[] allPlanks = transform.parent.GetComponentsInChildren<RopePlankAttach>();
+        foreach (var plank in allPlanks)
         {
-            isOnCooldown = true;
-
-            // Disable all RopePlankAttach colliders in the rope
-            RopePlankAttach[] allPlanks = transform.parent.GetComponentsInChildren<RopePlankAttach>();
-            foreach (var plank in allPlanks)
-            {
-                if (plank.plankCollider != null)
-                {
-                    plank.plankCollider.enabled = false;
-                }
-                plank.isOnCooldown = true;
-            }
-
-            // Re-enable after cooldown
-            Invoke(nameof(EndCooldownAll), cooldownDuration);
+            if (plank.plankCollider != null)
+                plank.plankCollider.enabled = false;
+            plank.isOnCooldown = true;
         }
+        Invoke(nameof(EndCooldownAll), cooldownDuration);
     }
 
-    // Re-enable all plank colliders after cooldown
+    /**
+     * Re-enables all plank colliders after cooldown.
+     */
     void EndCooldownAll()
     {
         RopePlankAttach[] allPlanks = transform.parent.GetComponentsInChildren<RopePlankAttach>();
@@ -53,9 +55,7 @@ public class RopePlankAttach : MonoBehaviour
         {
             plank.isOnCooldown = false;
             if (plank.plankCollider != null)
-            {
                 plank.plankCollider.enabled = true;
-            }
         }
         Debug.Log("[RopePlankAttach] All plank colliders re-enabled");
     }
