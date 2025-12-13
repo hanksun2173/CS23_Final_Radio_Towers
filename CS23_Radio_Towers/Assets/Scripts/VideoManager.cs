@@ -13,10 +13,7 @@ public class VideoManager : MonoBehaviour
         {
             videoPlayer.loopPointReached += OnVideoFinished;
         }
-        else
-        {
-            Debug.LogWarning("VideoPlayer not assigned!");
-        }
+
     }
 
     void OnVideoFinished(VideoPlayer vp)
