@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class HealthController : MonoBehaviour
 {
+    // Animator for damage animation
+    private Animator animator;
     [SerializeField]
     private float _currentHealth;
 
@@ -40,74 +42,52 @@ public class HealthController : MonoBehaviour
 
     void Start() 
     {
- 
         spriteRenderer = GetComponent<SpriteRenderer>();
         originalColor = spriteRenderer.color;
-
+        animator = GetComponent<Animator>();
     }
 
     public void TakeDamage(float damageAmount)
     {
         if (_currentHealth == 0)
-        {
             return;
-        }
-
         if (isInvincible)
-        {
             return;
-        }
-
 
         _currentHealth -= damageAmount;
 
-        StartCoroutine(FlashDamageColor());
-        // spriteRenderer.color = originalColor;
+        // Trigger damage animation
+        if (animator != null)
+            animator.SetBool("isDamage", true);
 
+        StartCoroutine(FlashDamageColor());
         OnHealthChanged.Invoke();
-        
 
         if (_currentHealth < 0)
-        {
             _currentHealth = 0;
-        }
 
         if (_currentHealth == 0)
         {
-            // Handle death like DeathCollider
             if (GameHandler.Instance != null)
-            {
                 GameHandler.Instance.SetSpawnIndex(deathSpawnIndex);
-            }
             SceneManager.LoadScene("MainScene");
-            // Spawn applied by GameHandler on scene load
         }
         else
         {
-            
             OnDamaged.Invoke();
         }
     }
     
     private System.Collections.IEnumerator FlashDamageColor()
     {
-        
         Color flashColor = new Color(1f, 0f, 0f, 1f);
-        
-        // Change to red
         spriteRenderer.color = flashColor;
-        
-        // Wait one frame to ensure the color change is applied
         yield return null;
-        
-        
-        // Wait for flash duration
         yield return new WaitForSeconds(damageFlashDuration);
-        
-        // Reset to original color
         spriteRenderer.color = originalColor;
-        
-        // Wait one frame and verify
+        // Reset damage animation trigger
+        if (animator != null)
+            animator.SetBool("isDamage", false);
         yield return null;
     }
 
