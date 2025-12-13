@@ -212,9 +212,49 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 497574313966916243, guid: dc8605d3c08904a5180c01310c693e15, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -3.1677399
+      objectReference: {fileID: 0}
+    - target: {fileID: 497574313966916243, guid: dc8605d3c08904a5180c01310c693e15, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -172.42587
+      objectReference: {fileID: 0}
+    - target: {fileID: 1186533070416569999, guid: dc8605d3c08904a5180c01310c693e15, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -8070686850402279387, guid: 3bc9bdcabb5f448478b6d609836db3f5, type: 3}
+    - target: {fileID: 1389798003586253060, guid: dc8605d3c08904a5180c01310c693e15, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 85.01337
+      objectReference: {fileID: 0}
+    - target: {fileID: 1389798003586253060, guid: dc8605d3c08904a5180c01310c693e15, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -172.42587
+      objectReference: {fileID: 0}
+    - target: {fileID: 1920770253944251475, guid: dc8605d3c08904a5180c01310c693e15, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296323883484252921, guid: dc8605d3c08904a5180c01310c693e15, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4121075199450679236, guid: dc8605d3c08904a5180c01310c693e15, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6718205071000190511, guid: dc8605d3c08904a5180c01310c693e15, type: 3}
       propertyPath: m_Name
       value: Win
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619211571583798688, guid: dc8605d3c08904a5180c01310c693e15, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -96.528336
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619211571583798688, guid: dc8605d3c08904a5180c01310c693e15, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -172.42587
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
