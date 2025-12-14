@@ -4,54 +4,55 @@ using UnityEngine.SceneManagement;
 
 public class HealthController : MonoBehaviour
 {
-    // Animator for damage animation
-    private Animator animator;
-    [SerializeField]
-    private float _currentHealth;
+    // =============================
+    //      Fields & Properties
+    // =============================
 
-    [SerializeField]
-    private float _maximumHealth;
+    [Header("Health Settings")]
+    [SerializeField] private float _currentHealth;
+    [SerializeField] private float _maximumHealth;
+    public bool isInvincible;
 
     [Header("Death Settings")]
-    public int deathSpawnIndex = 0; // Spawn index to respawn at when health reaches 0
+    public int deathSpawnIndex = 0;
 
-    private SpriteRenderer spriteRenderer;
-    private Color originalColor;
-    private float lastDamageTime = -999f;
-    
     [Header("Damage Visual Feedback")]
     public float damageFlashDuration = 0.2f;
     public float damageCooldown = 0.5f;
 
+    // Components
+    private SpriteRenderer spriteRenderer;
+    private Animator animator;
+    private Color originalColor;
 
-    public float remainingHealthPercentage
-    {
-        get
-        {
-            return _currentHealth / _maximumHealth;
-        }
-    }
-
-    public bool isInvincible;
-
+    // Events
     public UnityEvent OnDied;
-
     public UnityEvent OnDamaged;
-
     public UnityEvent OnHealthChanged;
 
-    void Start() 
+    // Utility
+    private float lastDamageTime = -999f;
+
+    // Health percentage property
+    public float remainingHealthPercentage => _currentHealth / _maximumHealth;
+
+    // =============================
+    //      Unity Methods
+    // =============================
+
+    private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         originalColor = spriteRenderer.color;
         animator = GetComponent<Animator>();
     }
 
+    /// <summary>
+    /// Applies damage to the player, triggers animation and events.
+    /// </summary>
     public void TakeDamage(float damageAmount)
     {
-        if (_currentHealth == 0)
-            return;
-        if (isInvincible)
+        if (_currentHealth == 0 || isInvincible)
             return;
 
         _currentHealth -= damageAmount;
@@ -78,6 +79,9 @@ public class HealthController : MonoBehaviour
         }
     }
     
+    /// <summary>
+    /// Flashes the sprite color and resets damage animation.
+    /// </summary>
     private System.Collections.IEnumerator FlashDamageColor()
     {
         Color flashColor = new Color(1f, 0f, 0f, 1f);
@@ -85,27 +89,23 @@ public class HealthController : MonoBehaviour
         yield return null;
         yield return new WaitForSeconds(damageFlashDuration);
         spriteRenderer.color = originalColor;
-        // Reset damage animation trigger
         if (animator != null)
             animator.SetBool("isDamage", false);
         yield return null;
     }
 
+    /// <summary>
+    /// Adds health to the player and clamps to max.
+    /// </summary>
     public void AddHealth(float amountToAdd)
     {
         if (_currentHealth == _maximumHealth)
-        {
             return;
-        }
 
         _currentHealth += amountToAdd;
-
         OnHealthChanged.Invoke();
-
         if (_currentHealth > _maximumHealth)
-        {
             _currentHealth = _maximumHealth;
-        }
     }
 
     /// <summary>
@@ -124,55 +124,37 @@ public class HealthController : MonoBehaviour
     //     SceneManager.LoadScene("GameOver");
     // }
 
-    // If the player collides with hazard objects, die.
-    // This checks for a tag named "Death" or for objects that have a DeathCollider component.
+    /// <summary>
+    /// Handles instant death on trigger with hazards.
+    /// </summary>
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other == null) return;
-
-        if (isInvincible) 
-        {
-            return;
-        }
-
-        // Tag-based lethal objects (instant death)
+        if (other == null || isInvincible) return;
         if (other.CompareTag("Death"))
         {
             OnDied.Invoke();
             return;
         }
-
-        // Component-based lethal objects (legacy/explicit DeathCollider)
         if (other.GetComponent<DeathCollider>() != null)
         {
             OnDied.Invoke();
         }
     }
 
+    /// <summary>
+    /// Handles instant death on collision with hazards.
+    /// </summary>
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision == null || collision.collider == null) return;
-        if (isInvincible) 
-        {
-            return;
-        }
-
+        if (collision == null || collision.collider == null || isInvincible) return;
         var col = collision.collider;
-        
-        // Death objects (instant kill)
         if (col.CompareTag("Death"))
         {
             OnDied.Invoke();
             return;
         }
-
-        // Debris objects (damage handled by EnemyDamage script)
         if (col.name.Contains("Debris"))
-        {
             return;
-        }
-
-        // Component-based lethal objects
         if (col.GetComponent<DeathCollider>() != null)
         {
             OnDied.Invoke();

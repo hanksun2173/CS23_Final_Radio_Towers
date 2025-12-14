@@ -1,16 +1,27 @@
+// =============================
+//   Debris Distance Alert
+// =============================
+// Shows an exclamation alert when the player is near debris.
+
 using UnityEngine;
 
 public class DebrisDistanceAlert : MonoBehaviour
 {
-    [SerializeField]
-    private float alertDistance = 5f; // Distance threshold for alert
-    [SerializeField]
-    private GameObject exclamationMarkPrefab; // Assign prefab in inspector
-    [SerializeField]
-    private float alertDuration = 2f;
+    [Header("Alert Settings")]
+    [SerializeField] private float alertDistance = 5f; // Distance threshold for alert
+    [SerializeField] private GameObject exclamationMarkPrefab; // Assign prefab in inspector
+    [SerializeField] private float alertDuration = 2f;
+
     private bool alertShown = false;
 
-    void Update()
+    // =============================
+    //      Unity Methods
+    // =============================
+
+    /// <summary>
+    /// Checks player distance and shows alert if within range.
+    /// </summary>
+    private void Update()
     {
         if (alertShown) return;
         GameObject player = GameObject.FindWithTag("Player");
@@ -23,11 +34,17 @@ public class DebrisDistanceAlert : MonoBehaviour
         }
     }
 
+    // =============================
+    //      Alert Logic
+    // =============================
+
+    /// <summary>
+    /// Instantiates the alert prefab above the player.
+    /// </summary>
     private void ShowAlert(Vector3 playerPosition)
     {
         if (exclamationMarkPrefab != null)
         {
-            // Alert appears at debris's x, player's y + offset, player's z
             Vector3 alertPos = new Vector3(transform.position.x, playerPosition.y + 3.5f, playerPosition.z);
             GameObject alert = Instantiate(exclamationMarkPrefab, alertPos, Quaternion.identity);
             Destroy(alert, alertDuration);

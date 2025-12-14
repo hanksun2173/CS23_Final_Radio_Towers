@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5934988811071803524}
   - component: {fileID: 7544559933311656975}
   - component: {fileID: 1118153231105244773}
-  - component: {fileID: 6193070910408515073}
+  - component: {fileID: 6531125705635737808}
   m_Layer: 6
   m_Name: Lever
   m_TagString: Untagged
@@ -158,7 +158,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 18.464561, y: 8.387375}
   m_EdgeRadius: 0
---- !u!114 &6193070910408515073
+--- !u!114 &6531125705635737808
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -167,6 +167,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8318864321861128853}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b24f1be6125a14c66beae5c227e5c1d4, type: 3}
+  m_Script: {fileID: 11500000, guid: 9afd8bb4cf183451ca0cf2671db466ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movingPlatform: {fileID: 0}

@@ -15,6 +15,10 @@ public class PuzzleMASTER : MonoBehaviour
 
 	public GameObject winCanvas; 
 	//add timer?
+	// Reference to the AudioSource for radio messages
+	public AudioSource radioAudioSource;
+	// Assign the radio message clip in the inspector
+	public AudioClip radioMessageClip;
 
     void Start()
     {
@@ -44,6 +48,12 @@ public class PuzzleMASTER : MonoBehaviour
 	public void DisplayRadioMessage()
     {
 		displayText.SetActive(true);
+		// Play radio message audio if assigned
+		if (radioAudioSource != null && radioMessageClip != null)
+		{
+			radioAudioSource.clip = radioMessageClip;
+			radioAudioSource.Play();
+		}
     }
 
 	public void MoveToNext ()
