@@ -9,12 +9,16 @@ public class GroundCheck : MonoBehaviour
     
     [Header("Landing Effects")]
     public GameObject dustEffectPrefab; // Drag your dust animation prefab here
-    public float minFallSpeedForDust = 5f; // Minimum fall speed to trigger dust effect
+    
+    [SerializeField] public AudioSource jumpSource;
+    [SerializeField] public AudioClip jumpClip;
+    [SerializeField] public float minFallSpeedForDust = 2f; // Set a default value as needed
     
     private bool isGrounded;
     private bool wasGroundedLastFrame;
     private Rigidbody2D playerRigidbody;
     private bool hasDustTriggered; // Track if dust already triggered for this landing
+    
     
     void Start()
     {
@@ -49,6 +53,7 @@ public class GroundCheck : MonoBehaviour
         if (playerRigidbody != null && playerRigidbody.linearVelocity.y <= -minFallSpeedForDust)
         {
             SpawnDustEffect();
+            PlayJumpSound();
             hasDustTriggered = true; // Mark that dust has been triggered for this landing
         }
     }
@@ -91,6 +96,17 @@ public class GroundCheck : MonoBehaviour
         {
             Gizmos.color = isGrounded ? Color.green : Color.red;
             Gizmos.DrawWireSphere(groundCheckPoint.position, groundCheckRadius);
+        }
+    }
+
+        /**
+     * Plays the jump sound effect.
+     */
+    private void PlayJumpSound()
+    {
+        if (jumpSource != null && jumpClip != null)
+        {
+            jumpSource.PlayOneShot(jumpClip);
         }
     }
 }
