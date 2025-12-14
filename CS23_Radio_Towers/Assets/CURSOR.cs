@@ -8,11 +8,16 @@ public class CURSOR : MonoBehaviour
 
 //Start is called before the first frame update 
 
-void Start ()
+  void Start()
     {
-        cursorHotspot = new Vector2 (cursorTexture.width / 2, cursorTexture.height / 2); 
-        Cursor.SetCursor (cursorTexture, cursorHotspot, CursorMode.Auto); 
+        // Fingertip hotspot for your 89x128 hand image
+        cursorHotspot = new Vector2(34, 18);
 
+        Cursor.SetCursor(
+            cursorTexture,
+            cursorHotspot,
+            CursorMode.Auto
+        );
     }
 }
   
