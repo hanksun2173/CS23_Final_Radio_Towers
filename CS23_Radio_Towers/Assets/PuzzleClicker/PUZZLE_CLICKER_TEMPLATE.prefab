@@ -133,7 +133,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 0.9098039, g: 0.76862746, b: 0.13725491, a: 1}
+  m_Color: {r: 0.044017673, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -409,8 +409,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a28f7c3f8dc43a4ebda7f9947004b05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  displayText: {fileID: 0}
   thePieces: []
   numberClicks: 0
+  winSpawnIndex: 1
+  winCanvas: {fileID: 0}
+  radioAudioSource: {fileID: 0}
+  radioMessageClip: {fileID: 0}
 --- !u!1 &8634704300003146527
 GameObject:
   m_ObjectHideFlags: 0
