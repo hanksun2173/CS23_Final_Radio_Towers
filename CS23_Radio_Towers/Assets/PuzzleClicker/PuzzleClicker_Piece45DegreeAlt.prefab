@@ -334,7 +334,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 291122a62b314b84b9db13616165e548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theSquare: {fileID: 5105729018970889263}
+  theSquares:
+  - {fileID: 7206609869617769569}
+  - {fileID: 903068411551573524}
+  - {fileID: 5575237401805133644}
   makeWhite: {r: 2.5, g: 2.5, b: 2.5, a: 1}
   makeGreen: {r: 0.23186183, g: 0.735849, b: 0.23186183, a: 1}
   makeYellow: {r: 0.9098039, g: 0.76862746, b: 0.13725491, a: 1}

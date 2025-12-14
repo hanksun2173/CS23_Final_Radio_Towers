@@ -5,7 +5,7 @@ using UnityEngine;
 public class PuzzleClicker : MonoBehaviour {
 
 	private bool selected;
-	public SpriteRenderer theSquare;
+	public SpriteRenderer[] theSquares;
 	public Color makeWhite = new Color(2.5f, 2.5f, 2.5f, 1);
 	public Color makeGreen = new Color(1.5f, 2.5f, 1.5f, 1);
 	public Color makeYellow = new Color(2.5f, 1.5f, 0.5f, 1);
@@ -31,15 +31,16 @@ public class PuzzleClicker : MonoBehaviour {
 		if (Input.GetMouseButtonUp (0)) {
 				canTurn = true;
 				if (isPowered){
-					theSquare.color = makeYellow;
-				} else {
-					theSquare.color = makeWhite;
-				}
+					SetAllSquaresColor(makeGreen);
+				} 
+				// else {
+				//     SetAllSquaresColor(makeWhite);
+				// }
 		}
 	}
 
 	void OnMouseOver(){
-		theSquare.color = makeGreen;
+		// theSquare.color = makeGreen;
 		if (canTurn){
 			if (Input.GetMouseButtonDown (0)) {
 			
@@ -72,10 +73,11 @@ public class PuzzleClicker : MonoBehaviour {
 
 	void OnMouseExit(){
 		if (isPowered && !isEnd && !isBomb){
-			theSquare.color = makeYellow;
-		} else {
-			theSquare.color = makeWhite;
-		}
+			SetAllSquaresColor(makeGreen);
+		} 
+		// else {
+		//     SetAllSquaresColor(makeWhite);
+		// }
 	}
 
 	void IsPieceConnected(){
@@ -88,16 +90,16 @@ public class PuzzleClicker : MonoBehaviour {
 		}
 		if (poweredConnectors > 0 && !isEnd && !isBomb){
 			isPowered= true;
-			theSquare.color = makeYellow;
+			SetAllSquaresColor(makeGreen);
 		} else{
 			isPowered= false;
-			//theSquare.color = makeWhite;
+			//SetAllSquaresColor(makeWhite);
 		} 
 		/*
 		if (!isPowerStart && !isEnd){
 			if (myConnectors[0].isConnectedToPower==true || myConnectors[1].isConnectedToPower==true){
 				isPowered = true;
-				theSquare.color = makeYellow;
+				theSquare.color = makeGreen;
 			}else{
 				isPowered = false;
 			}
@@ -120,45 +122,62 @@ public class PuzzleClicker : MonoBehaviour {
 
 	//End Complete:
 	public void EndYellow(){
-		theSquare.color = makeYellow;
+		SetAllSquaresColor(makeGreen);
 		StartCoroutine(EndYellowComplete());
 	}
 	IEnumerator EndYellowComplete(){
 		yield return new WaitForSeconds(0.4f);
-		theSquare.color = makeWhite;
+		SetAllSquaresColor(makeWhite);
 		yield return new WaitForSeconds(0.2f);
-		theSquare.color = makeYellow;
+		SetAllSquaresColor(makeGreen);
 		yield return new WaitForSeconds(0.4f);
-		theSquare.color = makeWhite;
+		SetAllSquaresColor(makeWhite);
 		yield return new WaitForSeconds(0.2f);
-		theSquare.color = makeYellow;
+		SetAllSquaresColor(makeGreen);
 		yield return new WaitForSeconds(0.4f);
-		theSquare.color = makeWhite;
+		SetAllSquaresColor(makeWhite);
 		yield return new WaitForSeconds(0.2f);
-		theSquare.color = makeYellow;
+		SetAllSquaresColor(makeGreen);
 	}
 
 
 	//If a bomb is triggered:
 	public void EndRed(){
-		theSquare.color = makeYellow; //I justst this to rd fr this bomb piece
+		SetAllSquaresColor(makeGreen); //I justst this to rd fr this bomb piece
 		StartCoroutine(BombDestroy());
 	}
 	IEnumerator BombDestroy(){
 		yield return new WaitForSeconds(0.2f);
-		theSquare.color = makeWhite;
+		SetAllSquaresColor(makeWhite);
 		yield return new WaitForSeconds(0.2f);
-		theSquare.color = makeYellow;
+		SetAllSquaresColor(makeGreen);
 		yield return new WaitForSeconds(0.2f);
-		theSquare.color = makeWhite;
+		SetAllSquaresColor(makeWhite);
 		yield return new WaitForSeconds(0.2f);
-		theSquare.color = makeYellow;
+		SetAllSquaresColor(makeGreen);
 		yield return new WaitForSeconds(0.2f);
-		theSquare.color = makeWhite;
+		SetAllSquaresColor(makeWhite);
 		yield return new WaitForSeconds(0.2f);
-		theSquare.color = makeYellow;
+		SetAllSquaresColor(makeGreen);
 		Destroy(gameObject);
 	}
 
+	void SetColorToSquares(Color color) {
+		foreach (var square in theSquares) {
+			square.color = color;
+		}
+	}
 
+	// Helper to set all squares to a color
+    private void SetAllSquaresColor(Color color)
+    {
+        if (theSquares != null)
+        {
+            foreach (var sr in theSquares)
+            {
+                if (sr != null)
+                    sr.color = color;
+            }
+        }
+    }
 }
