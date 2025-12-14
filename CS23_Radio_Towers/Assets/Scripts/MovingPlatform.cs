@@ -24,7 +24,15 @@ public class MovingPlatform : MonoBehaviour
     private void Start()
     {
         transform.position = points[0].position;
-        isMoving = false;
+        // If no lever is assigned, platform starts moving immediately
+        if (leverObject == null)
+        {
+            isMoving = true;
+        }
+        else
+        {
+            isMoving = false;
+        }
         leverActivated = false;
         if (leverObject != null)
         {
