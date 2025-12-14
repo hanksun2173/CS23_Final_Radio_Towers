@@ -265,9 +265,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3995258743212903136, guid: 2f52ada746a25274a9a53b5ecd81bb1b, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3995258743212903136, guid: 2f52ada746a25274a9a53b5ecd81bb1b, type: 3}
+      propertyPath: m_Color.g
+      value: 0.03938794
+      objectReference: {fileID: 0}
     - target: {fileID: 5669947010214988570, guid: 2f52ada746a25274a9a53b5ecd81bb1b, type: 3}
       propertyPath: m_Name
       value: PuzzleClicker_PieceCorner (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8817612054894961794, guid: 2f52ada746a25274a9a53b5ecd81bb1b, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8817612054894961794, guid: 2f52ada746a25274a9a53b5ecd81bb1b, type: 3}
+      propertyPath: m_Color.g
+      value: 0.03938794
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -400,6 +416,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PuzzleClicker_PieceStraight (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 7206609869617769569, guid: 7b56f5f750b4b6545a3d847f183fada5, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7206609869617769569, guid: 7b56f5f750b4b6545a3d847f183fada5, type: 3}
+      propertyPath: m_Color.g
+      value: 0.03938794
+      objectReference: {fileID: 0}
     - target: {fileID: 8181930403236750224, guid: 7b56f5f750b4b6545a3d847f183fada5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1
@@ -463,6 +487,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2087128712}
     m_Modifications:
+    - target: {fileID: 692760608748761103, guid: e1c9cc7831b71e04c8b48e3c12f45ffd, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 692760608748761103, guid: e1c9cc7831b71e04c8b48e3c12f45ffd, type: 3}
+      propertyPath: m_Color.g
+      value: 0.03938794
+      objectReference: {fileID: 0}
     - target: {fileID: 980693522092269446, guid: e1c9cc7831b71e04c8b48e3c12f45ffd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3
@@ -503,9 +535,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3995258743212903136, guid: e1c9cc7831b71e04c8b48e3c12f45ffd, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3995258743212903136, guid: e1c9cc7831b71e04c8b48e3c12f45ffd, type: 3}
+      propertyPath: m_Color.g
+      value: 0.03938794
+      objectReference: {fileID: 0}
     - target: {fileID: 5669947010214988570, guid: e1c9cc7831b71e04c8b48e3c12f45ffd, type: 3}
       propertyPath: m_Name
       value: PuzzleClicker_PieceT (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8817612054894961794, guid: e1c9cc7831b71e04c8b48e3c12f45ffd, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8817612054894961794, guid: e1c9cc7831b71e04c8b48e3c12f45ffd, type: 3}
+      propertyPath: m_Color.g
+      value: 0.03938794
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -523,6 +571,14 @@ PrefabInstance:
     - target: {fileID: 2041167413669463195, guid: 7b56f5f750b4b6545a3d847f183fada5, type: 3}
       propertyPath: m_Name
       value: PuzzleClicker_PieceStraight (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7206609869617769569, guid: 7b56f5f750b4b6545a3d847f183fada5, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7206609869617769569, guid: 7b56f5f750b4b6545a3d847f183fada5, type: 3}
+      propertyPath: m_Color.g
+      value: 0.03938794
       objectReference: {fileID: 0}
     - target: {fileID: 8181930403236750224, guid: 7b56f5f750b4b6545a3d847f183fada5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -590,6 +646,14 @@ PrefabInstance:
     - target: {fileID: 2041167413669463195, guid: 7b56f5f750b4b6545a3d847f183fada5, type: 3}
       propertyPath: m_Name
       value: PuzzleClicker_PieceStraight (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7206609869617769569, guid: 7b56f5f750b4b6545a3d847f183fada5, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7206609869617769569, guid: 7b56f5f750b4b6545a3d847f183fada5, type: 3}
+      propertyPath: m_Color.g
+      value: 0.03938794
       objectReference: {fileID: 0}
     - target: {fileID: 8181930403236750224, guid: 7b56f5f750b4b6545a3d847f183fada5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -663,6 +727,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PuzzleClicker_PieceStraight (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 7206609869617769569, guid: 7b56f5f750b4b6545a3d847f183fada5, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7206609869617769569, guid: 7b56f5f750b4b6545a3d847f183fada5, type: 3}
+      propertyPath: m_Color.g
+      value: 0.03938794
+      objectReference: {fileID: 0}
     - target: {fileID: 8181930403236750224, guid: 7b56f5f750b4b6545a3d847f183fada5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -729,6 +801,14 @@ PrefabInstance:
     - target: {fileID: 2041167413669463195, guid: 7b56f5f750b4b6545a3d847f183fada5, type: 3}
       propertyPath: m_Name
       value: PuzzleClicker_PieceStraight (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7206609869617769569, guid: 7b56f5f750b4b6545a3d847f183fada5, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7206609869617769569, guid: 7b56f5f750b4b6545a3d847f183fada5, type: 3}
+      propertyPath: m_Color.g
+      value: 0.03938794
       objectReference: {fileID: 0}
     - target: {fileID: 8181930403236750224, guid: 7b56f5f750b4b6545a3d847f183fada5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -854,7 +934,7 @@ SpriteRenderer:
   m_Size: {x: 20.48, y: 20.48}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &737005132
@@ -920,9 +1000,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3995258743212903136, guid: 2f52ada746a25274a9a53b5ecd81bb1b, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3995258743212903136, guid: 2f52ada746a25274a9a53b5ecd81bb1b, type: 3}
+      propertyPath: m_Color.g
+      value: 0.03938794
+      objectReference: {fileID: 0}
     - target: {fileID: 5669947010214988570, guid: 2f52ada746a25274a9a53b5ecd81bb1b, type: 3}
       propertyPath: m_Name
       value: PuzzleClicker_PieceCorner (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8817612054894961794, guid: 2f52ada746a25274a9a53b5ecd81bb1b, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8817612054894961794, guid: 2f52ada746a25274a9a53b5ecd81bb1b, type: 3}
+      propertyPath: m_Color.g
+      value: 0.03938794
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1420,6 +1516,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 4cc6357fc4dc94d679f0e7e19019f0ba, type: 3}
+    - target: {fileID: 692760608748761103, guid: e1c9cc7831b71e04c8b48e3c12f45ffd, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 692760608748761103, guid: e1c9cc7831b71e04c8b48e3c12f45ffd, type: 3}
+      propertyPath: m_Color.g
+      value: 0.03938794
+      objectReference: {fileID: 0}
     - target: {fileID: 980693522092269446, guid: e1c9cc7831b71e04c8b48e3c12f45ffd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1488,6 +1592,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 3995258743212903136, guid: e1c9cc7831b71e04c8b48e3c12f45ffd, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3995258743212903136, guid: e1c9cc7831b71e04c8b48e3c12f45ffd, type: 3}
+      propertyPath: m_Color.g
+      value: 0.03938794
+      objectReference: {fileID: 0}
     - target: {fileID: 5669947010214988570, guid: e1c9cc7831b71e04c8b48e3c12f45ffd, type: 3}
       propertyPath: m_Name
       value: PuzzleClicker_PieceT (6)
@@ -1496,6 +1608,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 4cc6357fc4dc94d679f0e7e19019f0ba, type: 3}
+    - target: {fileID: 8817612054894961794, guid: e1c9cc7831b71e04c8b48e3c12f45ffd, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8817612054894961794, guid: e1c9cc7831b71e04c8b48e3c12f45ffd, type: 3}
+      propertyPath: m_Color.g
+      value: 0.03938794
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1509,6 +1629,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2087128712}
     m_Modifications:
+    - target: {fileID: 692760608748761103, guid: e1c9cc7831b71e04c8b48e3c12f45ffd, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 692760608748761103, guid: e1c9cc7831b71e04c8b48e3c12f45ffd, type: 3}
+      propertyPath: m_Color.g
+      value: 0.03938794
+      objectReference: {fileID: 0}
     - target: {fileID: 980693522092269446, guid: e1c9cc7831b71e04c8b48e3c12f45ffd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1
@@ -1549,9 +1677,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3995258743212903136, guid: e1c9cc7831b71e04c8b48e3c12f45ffd, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3995258743212903136, guid: e1c9cc7831b71e04c8b48e3c12f45ffd, type: 3}
+      propertyPath: m_Color.g
+      value: 0.03938794
+      objectReference: {fileID: 0}
     - target: {fileID: 5669947010214988570, guid: e1c9cc7831b71e04c8b48e3c12f45ffd, type: 3}
       propertyPath: m_Name
       value: PuzzleClicker_PieceT
+      objectReference: {fileID: 0}
+    - target: {fileID: 8817612054894961794, guid: e1c9cc7831b71e04c8b48e3c12f45ffd, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8817612054894961794, guid: e1c9cc7831b71e04c8b48e3c12f45ffd, type: 3}
+      propertyPath: m_Color.g
+      value: 0.03938794
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1606,9 +1750,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3995258743212903136, guid: 2f52ada746a25274a9a53b5ecd81bb1b, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3995258743212903136, guid: 2f52ada746a25274a9a53b5ecd81bb1b, type: 3}
+      propertyPath: m_Color.g
+      value: 0.03938794
+      objectReference: {fileID: 0}
     - target: {fileID: 5669947010214988570, guid: 2f52ada746a25274a9a53b5ecd81bb1b, type: 3}
       propertyPath: m_Name
       value: PuzzleClicker_PieceCorner (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8817612054894961794, guid: 2f52ada746a25274a9a53b5ecd81bb1b, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8817612054894961794, guid: 2f52ada746a25274a9a53b5ecd81bb1b, type: 3}
+      propertyPath: m_Color.g
+      value: 0.03938794
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1689,7 +1849,7 @@ SpriteRenderer:
   m_Size: {x: 20.48, y: 20.48}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1096021746
@@ -2819,9 +2979,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3995258743212903136, guid: 2f52ada746a25274a9a53b5ecd81bb1b, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3995258743212903136, guid: 2f52ada746a25274a9a53b5ecd81bb1b, type: 3}
+      propertyPath: m_Color.g
+      value: 0.03938794
+      objectReference: {fileID: 0}
     - target: {fileID: 5669947010214988570, guid: 2f52ada746a25274a9a53b5ecd81bb1b, type: 3}
       propertyPath: m_Name
       value: PuzzleClicker_PieceCorner (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8817612054894961794, guid: 2f52ada746a25274a9a53b5ecd81bb1b, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8817612054894961794, guid: 2f52ada746a25274a9a53b5ecd81bb1b, type: 3}
+      propertyPath: m_Color.g
+      value: 0.03938794
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2846,6 +3022,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2087128712}
     m_Modifications:
+    - target: {fileID: 692760608748761103, guid: e1c9cc7831b71e04c8b48e3c12f45ffd, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 692760608748761103, guid: e1c9cc7831b71e04c8b48e3c12f45ffd, type: 3}
+      propertyPath: m_Color.g
+      value: 0.03938794
+      objectReference: {fileID: 0}
     - target: {fileID: 980693522092269446, guid: e1c9cc7831b71e04c8b48e3c12f45ffd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4
@@ -2886,9 +3070,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3995258743212903136, guid: e1c9cc7831b71e04c8b48e3c12f45ffd, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3995258743212903136, guid: e1c9cc7831b71e04c8b48e3c12f45ffd, type: 3}
+      propertyPath: m_Color.g
+      value: 0.03938794
+      objectReference: {fileID: 0}
     - target: {fileID: 5669947010214988570, guid: e1c9cc7831b71e04c8b48e3c12f45ffd, type: 3}
       propertyPath: m_Name
       value: PuzzleClicker_PieceT (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8817612054894961794, guid: e1c9cc7831b71e04c8b48e3c12f45ffd, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8817612054894961794, guid: e1c9cc7831b71e04c8b48e3c12f45ffd, type: 3}
+      propertyPath: m_Color.g
+      value: 0.03938794
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3019,6 +3219,14 @@ PrefabInstance:
     - target: {fileID: 2041167413669463195, guid: 7b56f5f750b4b6545a3d847f183fada5, type: 3}
       propertyPath: m_Name
       value: PuzzleClicker_PieceStraight (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7206609869617769569, guid: 7b56f5f750b4b6545a3d847f183fada5, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7206609869617769569, guid: 7b56f5f750b4b6545a3d847f183fada5, type: 3}
+      propertyPath: m_Color.g
+      value: 0.03938794
       objectReference: {fileID: 0}
     - target: {fileID: 8181930403236750224, guid: 7b56f5f750b4b6545a3d847f183fada5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3335,9 +3543,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3995258743212903136, guid: 2f52ada746a25274a9a53b5ecd81bb1b, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3995258743212903136, guid: 2f52ada746a25274a9a53b5ecd81bb1b, type: 3}
+      propertyPath: m_Color.g
+      value: 0.03938794
+      objectReference: {fileID: 0}
     - target: {fileID: 5669947010214988570, guid: 2f52ada746a25274a9a53b5ecd81bb1b, type: 3}
       propertyPath: m_Name
       value: PuzzleClicker_PieceCorner (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8817612054894961794, guid: 2f52ada746a25274a9a53b5ecd81bb1b, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8817612054894961794, guid: 2f52ada746a25274a9a53b5ecd81bb1b, type: 3}
+      propertyPath: m_Color.g
+      value: 0.03938794
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3402,9 +3626,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3995258743212903136, guid: 2f52ada746a25274a9a53b5ecd81bb1b, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3995258743212903136, guid: 2f52ada746a25274a9a53b5ecd81bb1b, type: 3}
+      propertyPath: m_Color.g
+      value: 0.03938794
+      objectReference: {fileID: 0}
     - target: {fileID: 5669947010214988570, guid: 2f52ada746a25274a9a53b5ecd81bb1b, type: 3}
       propertyPath: m_Name
       value: PuzzleClicker_PieceCorner (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8817612054894961794, guid: 2f52ada746a25274a9a53b5ecd81bb1b, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8817612054894961794, guid: 2f52ada746a25274a9a53b5ecd81bb1b, type: 3}
+      propertyPath: m_Color.g
+      value: 0.03938794
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3517,6 +3757,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2087128712}
     m_Modifications:
+    - target: {fileID: 692760608748761103, guid: e1c9cc7831b71e04c8b48e3c12f45ffd, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 692760608748761103, guid: e1c9cc7831b71e04c8b48e3c12f45ffd, type: 3}
+      propertyPath: m_Color.g
+      value: 0.03938794
+      objectReference: {fileID: 0}
     - target: {fileID: 980693522092269446, guid: e1c9cc7831b71e04c8b48e3c12f45ffd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5
@@ -3557,9 +3805,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3995258743212903136, guid: e1c9cc7831b71e04c8b48e3c12f45ffd, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3995258743212903136, guid: e1c9cc7831b71e04c8b48e3c12f45ffd, type: 3}
+      propertyPath: m_Color.g
+      value: 0.03938794
+      objectReference: {fileID: 0}
     - target: {fileID: 5669947010214988570, guid: e1c9cc7831b71e04c8b48e3c12f45ffd, type: 3}
       propertyPath: m_Name
       value: PuzzleClicker_PieceT (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8817612054894961794, guid: e1c9cc7831b71e04c8b48e3c12f45ffd, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8817612054894961794, guid: e1c9cc7831b71e04c8b48e3c12f45ffd, type: 3}
+      propertyPath: m_Color.g
+      value: 0.03938794
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3953,9 +4217,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3995258743212903136, guid: 2f52ada746a25274a9a53b5ecd81bb1b, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3995258743212903136, guid: 2f52ada746a25274a9a53b5ecd81bb1b, type: 3}
+      propertyPath: m_Color.g
+      value: 0.03938794
+      objectReference: {fileID: 0}
     - target: {fileID: 5669947010214988570, guid: 2f52ada746a25274a9a53b5ecd81bb1b, type: 3}
       propertyPath: m_Name
       value: PuzzleClicker_PieceCorner (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8817612054894961794, guid: 2f52ada746a25274a9a53b5ecd81bb1b, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8817612054894961794, guid: 2f52ada746a25274a9a53b5ecd81bb1b, type: 3}
+      propertyPath: m_Color.g
+      value: 0.03938794
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
