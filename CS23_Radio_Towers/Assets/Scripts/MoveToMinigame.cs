@@ -17,7 +17,15 @@ public class MoveToMinigame : MonoBehaviour
             {
                 if (Application.CanStreamedLevelBeLoaded(sceneToLoad))
                 {
-                    SceneManager.LoadScene(sceneToLoad);
+                    FadeManager fadeManager = FindObjectOfType<FadeManager>();
+                    if (fadeManager != null)
+                    {
+                        fadeManager.FadeToScene(sceneToLoad);
+                    }
+                    else
+                    {
+                        SceneManager.LoadScene(sceneToLoad);
+                    }
                     Debug.Log($"Scene {sceneToLoad} loaded successfully.");
                 }
                 else

@@ -13,8 +13,17 @@ public class EnterMainScene : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            // Load the main scene
-            SceneManager.LoadScene(mainSceneName);
+            // Load the main scene with fade
+            FadeManager fadeManager = FindObjectOfType<FadeManager>();
+            if (fadeManager != null)
+            {
+                fadeManager.FadeToScene(mainSceneName);
+            }
+            else
+            {
+                // Fallback if FadeManager is missing
+                SceneManager.LoadScene(mainSceneName);
+            }
         }
     }
 }

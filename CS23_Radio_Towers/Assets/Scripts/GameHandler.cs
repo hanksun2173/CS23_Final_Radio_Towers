@@ -97,7 +97,15 @@ public class GameHandler : MonoBehaviour
     {
 
         ResetAllTowers();
-        SceneManager.LoadScene("MainMenu");
+        FadeManager fadeManager = FindObjectOfType<FadeManager>();
+        if (fadeManager != null)
+        {
+            fadeManager.FadeToScene("MainMenu");
+        }
+        else
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
     }
 
     public void StartGame(){
@@ -106,13 +114,29 @@ public class GameHandler : MonoBehaviour
         currentSpawnIndex = 0;
         // Reset all tower states when starting new game
         ResetAllTowers();
-        SceneManager.LoadScene("OpeningScene");
+        FadeManager fadeManager = FindObjectOfType<FadeManager>();
+        if (fadeManager != null)
+        {
+            fadeManager.FadeToScene("OpeningScene");
+        }
+        else
+        {
+            SceneManager.LoadScene("OpeningScene");
+        }
         //SceneManager.LoadScene("MainScene");
     }
 
     public void Credits(){
         Debug.Log("[GameHandler] Credits() called");
-        SceneManager.LoadScene("Credits");
+        FadeManager fadeManager = FindObjectOfType<FadeManager>();
+        if (fadeManager != null)
+        {
+            fadeManager.FadeToScene("Credits");
+        }
+        else
+        {
+            SceneManager.LoadScene("Credits");
+        }
     }
 
     public void ReplayLastLevel(){ }

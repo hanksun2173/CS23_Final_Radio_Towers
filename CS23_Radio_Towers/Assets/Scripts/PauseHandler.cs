@@ -90,7 +90,15 @@ public class PauseHandler : MonoBehaviour {
         // Method for pause menu buttons to load MainScene
         public void LoadMainScene() {
                 Resume(); // Ensure game is unpaused
-                SceneManager.LoadScene("MainScene");
+                                FadeManager fadeManager = FindObjectOfType<FadeManager>();
+                                if (fadeManager != null)
+                                {
+                                        fadeManager.FadeToScene("MainScene");
+                                }
+                                else
+                                {
+                                        SceneManager.LoadScene("MainScene");
+                                }
         }
 
         // public void SetLevel(float sliderValue){

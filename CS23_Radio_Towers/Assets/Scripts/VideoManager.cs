@@ -18,6 +18,14 @@ public class VideoManager : MonoBehaviour
 
     void OnVideoFinished(VideoPlayer vp)
     {
-        SceneManager.LoadScene(sceneName);
+        FadeManager fadeManager = FindObjectOfType<FadeManager>();
+        if (fadeManager != null)
+        {
+            fadeManager.FadeToScene(sceneName);
+        }
+        else
+        {
+            SceneManager.LoadScene(sceneName);
+        }
     }
 }

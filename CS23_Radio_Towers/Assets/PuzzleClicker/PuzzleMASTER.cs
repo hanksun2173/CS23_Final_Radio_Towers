@@ -20,6 +20,17 @@ public class PuzzleMASTER : MonoBehaviour
 	// Assign the radio message clip in the inspector
 	public AudioClip radioMessageClip;
 
+	// Reference to the ambient sound AudioSource
+	public AudioSource ambientAudioSource;
+
+	// Radio message lines
+	[TextArea(2,5)]
+	public string[] radioMessageLines;
+	public float radioLineDelay = 2f; // seconds between lines
+	private int currentRadioLine = 0;
+	private Coroutine radioMessageCoroutine;
+	public TMPro.TextMeshProUGUI radioTextUI; // Assign in inspector
+
     void Start()
     {
 		winCanvas.SetActive(false);
@@ -41,6 +52,11 @@ public class PuzzleMASTER : MonoBehaviour
 	public void PuzzleComplete(){
 		winCanvas.SetActive(true);
 		
+		// Stop ambient sound if assigned
+		if (ambientAudioSource != null)
+		{
+			ambientAudioSource.Stop();
+		}
 
 		// Debug.Log("YOU DID IT! PUZZLE COMPLETE in " + numberClicks + " clicks!");
 	}
@@ -54,7 +70,27 @@ public class PuzzleMASTER : MonoBehaviour
 			radioAudioSource.clip = radioMessageClip;
 			radioAudioSource.Play();
 		}
+		if (radioMessageCoroutine != null)
+		{
+			StopCoroutine(radioMessageCoroutine);
+		}
+		currentRadioLine = 0;
+		radioMessageCoroutine = StartCoroutine(DisplayRadioLinesCoroutine());
     }
+
+	private IEnumerator DisplayRadioLinesCoroutine()
+	{
+		while (currentRadioLine < radioMessageLines.Length)
+		{
+			if (radioTextUI != null)
+				radioTextUI.text = radioMessageLines[currentRadioLine];
+			currentRadioLine++;
+			if (currentRadioLine < radioMessageLines.Length)
+				yield return new WaitForSeconds(radioLineDelay);
+		}
+		// Do not hide displayText or clear the text, so the last line and box remain
+		radioMessageCoroutine = null;
+	}
 
 	public void MoveToNext ()
     {
@@ -72,7 +108,15 @@ public class PuzzleMASTER : MonoBehaviour
             {
                 Debug.LogError("[PuzzleMASTER] GameHandler.Instance is null!");
             }
-        SceneManager.LoadScene("MainScene");
+		FadeManager fadeManager = FindObjectOfType<FadeManager>();
+		if (fadeManager != null)
+		{
+			fadeManager.FadeToScene("MainScene");
+		}
+		else
+		{
+			SceneManager.LoadScene("MainScene");
+		}
         
     }
 

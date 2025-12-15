@@ -71,7 +71,15 @@ public class HealthController : MonoBehaviour
         {
             if (GameHandler.Instance != null)
                 GameHandler.Instance.SetSpawnIndex(deathSpawnIndex);
-            SceneManager.LoadScene("MainScene");
+            FadeManager fadeManager = FindObjectOfType<FadeManager>();
+            if (fadeManager != null)
+            {
+                fadeManager.FadeToScene("MainScene");
+            }
+            else
+            {
+                SceneManager.LoadScene("MainScene");
+            }
         }
         else
         {

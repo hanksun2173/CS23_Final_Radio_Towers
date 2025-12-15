@@ -25,7 +25,15 @@ public class EnterTower : MonoBehaviour
             GameHandler.SetCurrentTower(towerId);
             
             // Load the level scene
-            SceneManager.LoadScene(levelSceneName);
+            FadeManager fadeManager = FindObjectOfType<FadeManager>();
+            if (fadeManager != null)
+            {
+                fadeManager.FadeToScene(levelSceneName);
+            }
+            else
+            {
+                SceneManager.LoadScene(levelSceneName);
+            }
         }
     }
 
@@ -34,7 +42,15 @@ public class EnterTower : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             // Load the main scene
-            SceneManager.LoadScene(mainSceneName);
+            FadeManager fadeManager = FindObjectOfType<FadeManager>();
+            if (fadeManager != null)
+            {
+                fadeManager.FadeToScene(mainSceneName);
+            }
+            else
+            {
+                SceneManager.LoadScene(mainSceneName);
+            }
         }
     }
 }

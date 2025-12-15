@@ -12,7 +12,15 @@ public class DeathCollider : MonoBehaviour
             {
                 GameHandler.Instance.SetSpawnIndex(loseSpawnIndex);
             }
-            SceneManager.LoadScene("MainScene");
+            FadeManager fadeManager = FindObjectOfType<FadeManager>();
+            if (fadeManager != null)
+            {
+                fadeManager.FadeToScene("MainScene");
+            }
+            else
+            {
+                SceneManager.LoadScene("MainScene");
+            }
             // Spawn applied by GameHandler on scene load
         }
     }
