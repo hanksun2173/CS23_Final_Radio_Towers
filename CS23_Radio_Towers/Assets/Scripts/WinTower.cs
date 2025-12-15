@@ -3,7 +3,6 @@ using UnityEngine.SceneManagement;
 
 public class WinTower : MonoBehaviour
 {
-    [Tooltip("Spawn index in GameHandler to use when player wins (e.g. 1)")] 
     public int winSpawnIndex = 1;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
