@@ -44,7 +44,8 @@ public class PauseMenu : MonoBehaviour
         {
             pauseMenuUI.SetActive(true);
             Time.timeScale = 0f;
-            videoPlayer.Pause();
+            if (videoPlayer != null)
+                videoPlayer.Pause();
             GameIsPaused = true;
             Debug.Log("[PauseMenu] Game paused");
         }
@@ -61,7 +62,8 @@ public class PauseMenu : MonoBehaviour
             pauseMenuUI.SetActive(false);
         }
         Time.timeScale = 1f;
-        videoPlayer.Play();
+        if (videoPlayer != null)
+            videoPlayer.Play();
         GameIsPaused = false;
         Debug.Log("[PauseMenu] Game resumed");
     }

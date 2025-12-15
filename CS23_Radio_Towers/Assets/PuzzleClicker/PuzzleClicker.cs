@@ -21,7 +21,20 @@ public class PuzzleClicker : MonoBehaviour {
 	public bool isEnd = false;
 	public bool isBomb = false;
 
+	// Store the original color of each square
+    private Color[] originalColors;
+
 	void Start(){
+		// Cache the original color of each square
+        if (theSquares != null)
+        {
+            originalColors = new Color[theSquares.Length];
+            for (int i = 0; i < theSquares.Length; i++)
+            {
+                if (theSquares[i] != null)
+                    originalColors[i] = theSquares[i].color;
+            }
+        }
 	}
 
 	void Update () {
@@ -93,7 +106,7 @@ public class PuzzleClicker : MonoBehaviour {
 			SetAllSquaresColor(makeGreen);
 		} else{
 			isPowered= false;
-			//SetAllSquaresColor(makeWhite);
+			ResetAllSquaresToOriginal();
 		} 
 		/*
 		if (!isPowerStart && !isEnd){
@@ -177,6 +190,19 @@ public class PuzzleClicker : MonoBehaviour {
             {
                 if (sr != null)
                     sr.color = color;
+            }
+        }
+    }
+
+    // Helper to reset all squares to their original color
+    private void ResetAllSquaresToOriginal()
+    {
+        if (theSquares != null && originalColors != null)
+        {
+            for (int i = 0; i < theSquares.Length; i++)
+            {
+                if (theSquares[i] != null)
+                    theSquares[i].color = originalColors[i];
             }
         }
     }
