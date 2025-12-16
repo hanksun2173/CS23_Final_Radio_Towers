@@ -2858,7 +2858,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 313069029167430059, guid: dcc832b9d665b4825941bc4ed6eebceb, type: 3}
       propertyPath: 'radioMessageLines.Array.data[4]'
-      value: Click next to continue.
+      value: Click the play button on the radio to continue.
       objectReference: {fileID: 0}
     - target: {fileID: 8436488538705762582, guid: dcc832b9d665b4825941bc4ed6eebceb, type: 3}
       propertyPath: m_Name

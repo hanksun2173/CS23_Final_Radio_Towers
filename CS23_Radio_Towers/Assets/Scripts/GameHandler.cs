@@ -117,11 +117,11 @@ public class GameHandler : MonoBehaviour
         FadeManager fadeManager = FindObjectOfType<FadeManager>();
         if (fadeManager != null)
         {
-            fadeManager.FadeToScene("OpeningScene");
+            fadeManager.FadeToScene("Opening");
         }
         else
         {
-            SceneManager.LoadScene("OpeningScene");
+            SceneManager.LoadScene("Opening");
         }
         //SceneManager.LoadScene("MainScene");
     }

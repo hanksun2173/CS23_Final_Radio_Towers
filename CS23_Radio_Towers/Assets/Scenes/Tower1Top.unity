@@ -1652,7 +1652,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5782005333072262007, guid: 783ff0e8aceda9c43aecbcdc06de0452, type: 3}
       propertyPath: 'radioMessageLines.Array.data[4]'
-      value: click next to continue.
+      value: Click the play button on the radio to continue.
       objectReference: {fileID: 0}
     - target: {fileID: 5905577362005968167, guid: 783ff0e8aceda9c43aecbcdc06de0452, type: 3}
       propertyPath: m_Color.b

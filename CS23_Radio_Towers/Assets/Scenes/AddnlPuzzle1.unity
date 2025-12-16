@@ -980,6 +980,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fade
       objectReference: {fileID: 0}
+    - target: {fileID: 1248990697618681086, guid: e75aa9fa966f14c8db4386510c05be15, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7180428115681110303, guid: e75aa9fa966f14c8db4386510c05be15, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2710,7 +2714,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5919008856041818403, guid: 81c864edef76246ae93424ebdc202da1, type: 3}
       propertyPath: 'radioMessageLines.Array.data[4]'
-      value: Click next to continue.
+      value: Click the play button on the radio to continue.
       objectReference: {fileID: 0}
     - target: {fileID: 5930783721815258404, guid: 81c864edef76246ae93424ebdc202da1, type: 3}
       propertyPath: m_Sprite

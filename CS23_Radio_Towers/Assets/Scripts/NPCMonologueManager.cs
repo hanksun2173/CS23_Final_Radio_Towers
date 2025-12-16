@@ -72,8 +72,14 @@ public class NPCMonologueManager : MonoBehaviour {
 
        public void CloseMonologue(){
                        StopTyping();
-                       monologueBox.SetActive(false);
-                       monologueText.text = "..."; //reset text
+                       if (monologueBox != null && monologueBox.gameObject != null)
+                       {
+                           monologueBox.SetActive(false);
+                       }
+                       if (monologueText != null)
+                       {
+                           monologueText.text = "..."; //reset text
+                       }
                        counter = 0; //reset counter
                        // Re-enable player movement
                        if (playerMovement != null)
