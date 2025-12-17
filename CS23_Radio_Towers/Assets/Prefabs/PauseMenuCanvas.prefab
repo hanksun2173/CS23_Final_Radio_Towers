@@ -218,7 +218,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_TargetDisplay: 0
 --- !u!114 &928797817082407594
 MonoBehaviour:
@@ -273,6 +273,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 3032777770006206741}
+  videoPlayer: {fileID: 0}
 --- !u!114 &2156656406001676479
 MonoBehaviour:
   m_ObjectHideFlags: 0

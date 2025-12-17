@@ -67,4 +67,13 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = false;
         Debug.Log("[PauseMenu] Game resumed");
     }
+
+    // Call this from the pause button's OnClick event in the Inspector
+    public void OnPauseButtonClicked()
+    {
+        if (!GameIsPaused)
+        {
+            Pause();
+        }
+    }
 }
