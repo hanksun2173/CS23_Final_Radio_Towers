@@ -1,29 +1,33 @@
-using System.Collections.Generic;
-using System.Collections;
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 public class Cloud : MonoBehaviour
 {
-    public float speed = 0.5f;
-    private Vector2 destination;
-    public int distance = 2500; 
+	public float speed = 0.2f;
+	private Vector2 destination;
+	public int distance = 300;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        destination = new Vector2(transform.position.x + 2500, transform.position.y);
+       destination = new Vector2(transform.position.x + distance, transform.position.y); 
+       speed= Random.Range(2,10);
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-       Vector2 pos = Vector2.Lerp((Vector2)transform.position, destination, speed * Time.fixedDeltaTime);
-        transform.position = new Vector3(pos.x, pos.y, transform.position.z);
-        
-        float distancetoEnd = Vector3.Distance(transform.position, destination);    
-        if (distancetoEnd <= 5)
-        {
-            Destroy(gameObject);
-        }
+        //Vector2 pos = Vector2.Lerp ((Vector2)transform.position, destination, speed * Time.fixedDeltaTime);
+		Vector2 pos = Vector2.MoveTowards ((Vector2)transform.position, destination, speed * Time.fixedDeltaTime);
+
+        transform.position = new Vector2(pos.x, pos.y);
+
+		float distanceToEnd = Vector3.Distance(transform.position, destination);
+		if (distanceToEnd <= 1)
+		{
+			Destroy(gameObject);
+		}
+
     }
 }

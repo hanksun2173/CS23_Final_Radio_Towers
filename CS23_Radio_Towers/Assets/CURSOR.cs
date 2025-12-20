@@ -11,7 +11,7 @@ public class CURSOR : MonoBehaviour
   void Start()
     {
         // Fingertip hotspot for your 89x128 hand image
-        cursorHotspot = new Vector2(34, 18);
+        cursorHotspot = new Vector2(30, 18);
 
         Cursor.SetCursor(
             cursorTexture,
